@@ -41,7 +41,7 @@ export default function Footer() {
             <Link to="/contact" className="btn-accent">
               Get a Free Quote <ArrowRight size={16} />
             </Link>
-            <a href={`tel:${SITE.phone}`} className="btn-outline-white">
+            <a href={`tel:${SITE.phone.replace(/[^+0-9]/g, '')}`} className="btn-outline-white">
               <Phone size={16} /> Call Us Now
             </a>
           </div>
@@ -64,7 +64,7 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="space-y-3 text-sm">
-              <a href={`tel:${SITE.phone}`} className="flex items-start gap-3 text-white/60 hover:text-accent transition-colors group">
+              <a href={`tel:${SITE.phone.replace(/[^+0-9]/g, '')}`} className="flex items-start gap-3 text-white/60 hover:text-accent transition-colors group">
                 <Phone size={14} className="shrink-0 mt-0.5 group-hover:text-accent" />
                 <span>{SITE.phone}</span>
               </a>

@@ -6,6 +6,17 @@ import { pageTransition, fadeUp, stagger, viewportOnce } from '../utils/animatio
 import PageHero from '../components/common/PageHero';
 import { SITE } from '../utils/constants';
 
+const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || 'https://formsubmit.co/ajax/sura767848@gmail.com';
+const INITIAL_FORM = {
+  name: '',
+  email: '',
+  phone: '',
+  company: '',
+  subject: '',
+  enquiry: '',
+  message: '',
+};
+
 const ENQUIRY_TYPES = [
   'Geotechnical Engineering',
   'Slope Stabilization',
@@ -19,15 +30,17 @@ const ENQUIRY_TYPES = [
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', enquiry: '', message: '' });
+  const [form, setForm] = useState(INITIAL_FORM);
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
   const [errors, setErrors] = useState({});
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const e = {};
-    if (!form.name.trim())    e.name = 'Name is required';
+    if (!form.name.trim()) e.name = 'Name is required';
     if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) e.email = 'Valid email required';
-    if (!form.phone.trim())   e.phone = 'Phone is required';
+    if (!form.phone.trim()) e.phone = 'Phone is required';
+    if (!form.subject.trim()) e.subject = 'Subject is required';
     if (!form.message.trim()) e.message = 'Message is required';
     return e;
   };
@@ -37,12 +50,50 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
-    if (Object.keys(errs).length > 0) { setErrors(errs); return; }
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      setSubmitError('');
+      setStatus('error');
+      return;
+    }
+
     setErrors({});
+    setSubmitError('');
     setStatus('submitting');
-    // Simulate API call
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus('success');
+
+    try {
+      const payload = new URLSearchParams({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        company: form.company.trim(),
+        subject: form.subject.trim(),
+        enquiry: form.enquiry.trim(),
+        message: form.message.trim(),
+        _replyto: form.email.trim(),
+        _subject: `Website enquiry from ${form.name.trim()} - ${form.subject.trim()}`,
+        _captcha: 'false',
+      });
+
+      const response = await fetch(CONTACT_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: payload,
+      });
+
+      if (!response.ok) {
+        throw new Error('We could not deliver your message right now. Please try again later.');
+      }
+
+      setForm(INITIAL_FORM);
+      setStatus('success');
+    } catch (error) {
+      setSubmitError(error.message || 'Something went wrong. Please try again.');
+      setStatus('error');
+    }
   };
 
   return (
@@ -66,8 +117,8 @@ export default function Contact() {
               </motion.p>
 
               {[
-                { icon: Phone, label: 'Phone', values: [SITE.phone, SITE.phone2], href: `tel:${SITE.phone}` },
-                { icon: Mail,  label: 'Email', values: [SITE.email, SITE.email2], href: `mailto:${SITE.email}` },
+                { icon: Phone, label: 'Phone', values: [SITE.phone, SITE.phone2], href: `tel:${SITE.phone.replace(/[^+0-9]/g, '')}` },
+                { icon: Mail,  label: 'Email', values: [SITE.email], href: `mailto:${SITE.email}` },
                 { icon: MapPin, label: 'Address', values: [SITE.address] },
               ].map(({ icon: Icon, label, values, href }) => (
                 <motion.div key={label} variants={fadeUp} className="flex gap-4 mb-6 p-5 border border-neutral-100 hover:border-accent transition-colors">
@@ -97,7 +148,7 @@ export default function Contact() {
               {/* WhatsApp */}
               <motion.a
                 variants={fadeUp}
-                href={`https://wa.me/${SITE.whatsapp}?text=Hello, I would like to enquire about NY Infra Services.`}
+                href={`https://wa.me/${SITE.whatsapp.replace(/[^0-9]/g, '')}?text=Hello, I would like to enquire about NY Infra Services.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 mt-6 p-4 bg-green-600 text-white hover:bg-green-700 transition-colors"
@@ -120,6 +171,12 @@ export default function Contact() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} noValidate>
+                    {submitError && (
+                      <div className="mb-5 flex items-start gap-2 rounded border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+                        <AlertCircle size={16} className="mt-0.5 shrink-0" />
+                        <span>{submitError}</span>
+                      </div>
+                    )}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                       {[
                         { name: 'name',    label: 'Full Name *',    type: 'text',  placeholder: 'Your full name' },
@@ -143,12 +200,27 @@ export default function Contact() {
                       ))}
                     </div>
 
-                    <div className="mb-5">
-                      <label htmlFor="contact-enquiry" className="form-label">Enquiry Type</label>
-                      <select id="contact-enquiry" name="enquiry" value={form.enquiry} onChange={handleChange} className="form-input">
-                        <option value="">Select enquiry type</option>
-                        {ENQUIRY_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
-                      </select>
+                    <div className="mb-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div>
+                        <label htmlFor="contact-subject" className="form-label">Subject *</label>
+                        <input
+                          id="contact-subject"
+                          name="subject"
+                          type="text"
+                          placeholder="Brief subject"
+                          value={form.subject}
+                          onChange={handleChange}
+                          className={`form-input ${errors.subject ? 'border-red-500' : ''}`}
+                        />
+                        {errors.subject && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle size={12} />{errors.subject}</p>}
+                      </div>
+                      <div>
+                        <label htmlFor="contact-enquiry" className="form-label">Enquiry Type</label>
+                        <select id="contact-enquiry" name="enquiry" value={form.enquiry} onChange={handleChange} className="form-input">
+                          <option value="">Select enquiry type</option>
+                          {ENQUIRY_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+                        </select>
+                      </div>
                     </div>
 
                     <div className="mb-6">

@@ -10,7 +10,7 @@ function TopBar() {
     <div className="bg-primary text-white py-2 hidden lg:block">
       <div className="container-custom flex items-center justify-between text-xs">
         <div className="flex items-center gap-6">
-          <a href={`tel:${SITE.phone}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
+          <a href={`tel:${SITE.phone.replace(/[^+0-9]/g, '')}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
             <Phone size={12} />
             <span>{SITE.phone}</span>
           </a>
@@ -234,7 +234,7 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="pt-4 space-y-2 text-xs text-secondary">
-                  <a href={`tel:${SITE.phone}`} className="flex items-center gap-2 hover:text-primary">
+                  <a href={`tel:${SITE.phone.replace(/[^+0-9]/g, '')}`} className="flex items-center gap-2 hover:text-primary">
                     <Phone size={14} /> {SITE.phone}
                   </a>
                   <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 hover:text-primary">

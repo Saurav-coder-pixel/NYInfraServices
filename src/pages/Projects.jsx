@@ -12,24 +12,38 @@ import { SITE } from '../utils/constants';
 
 function ProjectCard({ project }) {
   return (
-    <motion.article variants={fadeUp} className="card card-hover group overflow-hidden">
-      <div className="relative overflow-hidden" style={{aspectRatio:'16/10'}}>
+    <motion.article variants={fadeUp} className="card card-hover group overflow-hidden border border-neutral-200 hover:border-accent transition-colors duration-300 shadow-sm hover:shadow-md">
+      <div className="relative overflow-hidden" style={{ aspectRatio: '16/10' }}>
         <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <span className={`absolute top-4 left-4 tag ${project.status === 'Ongoing' ? 'bg-accent/90 text-primary' : 'bg-white/90 text-primary'}`}>{project.status}</span>
         <span className="absolute top-4 right-4 tag bg-primary/90 text-white">{project.subcategory}</span>
       </div>
       <div className="p-6">
-        <h3 className="font-display font-bold text-base text-neutral-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">{project.title}</h3>
-        <div className="flex flex-wrap gap-3 text-xs text-secondary mb-3">
+        <h3 className="font-display font-bold text-lg text-neutral-900 mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
+        <p className="text-secondary text-sm leading-relaxed mb-4 line-clamp-3">{project.description}</p>
+        <div className="mb-4">
+          <p className="text-xs uppercase tracking-wider text-secondary mb-2">Technology Stack</p>
+          <div className="flex flex-wrap gap-2">
+            {project.technology.slice(0, 3).map((tech) => (
+              <span key={tech} className="tag bg-neutral-100 text-neutral-900 text-xs">{tech}</span>
+            ))}
+          </div>
+        </div>
+        <div className="mb-5 text-sm text-secondary">
+          <ul className="space-y-2">
+            {project.features.slice(0, 3).map((feature) => (
+              <li key={feature} className="flex items-start gap-2">
+                <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex flex-wrap gap-3 text-xs text-secondary">
           <span className="flex items-center gap-1"><MapPin size={11} /> {project.location}</span>
           <span className="flex items-center gap-1"><Calendar size={11} /> {project.year}</span>
-          <span className="flex items-center gap-1"><Clock size={11} /> {project.duration}</span>
         </div>
-        <p className="text-secondary text-sm leading-relaxed mb-4 line-clamp-2">{project.scope}</p>
-        <Link to={`/projects/${project.id}`} className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all">
-          View Details <ArrowLeft size={14} className="rotate-180" />
-        </Link>
       </div>
     </motion.article>
   );

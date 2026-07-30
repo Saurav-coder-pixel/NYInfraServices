@@ -44,7 +44,7 @@ function JobCard({ job }) {
               ))}
             </ul>
             <a
-              href={`mailto:careers@nyinfraservices.com?subject=Application for ${job.title}`}
+              href={`mailto:${SITE.email}?subject=Application for ${job.title}`}
               className="btn-primary text-xs"
             >
               Apply Now <Send size={14} />
@@ -130,7 +130,7 @@ export default function Careers() {
           >
             <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Don't See Your Role?</h3>
             <p className="text-secondary text-sm mb-5">Send us your resume and we will keep you in mind for future opportunities.</p>
-            <a href="mailto:careers@nyinfraservices.com?subject=General Application" className="btn-primary">
+            <a href={`mailto:${SITE.email}?subject=General Application`} className="btn-primary">
               Send Your Resume <Send size={15} />
             </a>
           </motion.div>
