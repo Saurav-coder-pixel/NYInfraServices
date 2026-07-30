@@ -7,7 +7,7 @@
   to = "/index.html"
   status = 200
 
-[build.environment]
-  VITE_CONTACT_FORM_ENDPOINT = "https://formsubmit.co/ajax/nyinfraservices@gmail.com"
-  VITE_RESEND_TO_EMAIL = "nyinfraservices@gmail.com"
-  VITE_RESEND_FROM_EMAIL = "onboarding@resend.dev"
+# [build.environment]
+#   VITE_CONTACT_FORM_ENDPOINT = "https://formsubmit.co/ajax/nyinfraservices@gmail.com"
+#   VITE_RESEND_TO_EMAIL = "nyinfraservices@gmail.com"
+#   VITE_RESEND_FROM_EMAIL = "onboarding@resend.dev"
