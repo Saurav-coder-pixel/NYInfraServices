@@ -11,12 +11,12 @@ import {
 import { stagger, fadeUp, viewportOnce } from '../../utils/animations';
 
 const STAT_ITEMS = [
-  { value: 150, suffix: '+', label: 'Projects Completed',  Icon: FolderCheck },
-  { value: 25,  suffix: '+', label: 'States Covered',      Icon: MapPin },
-  { value: 50,  suffix: '+', label: 'Expert Engineers',    Icon: HardHat },
-  { value: 10,  suffix: '+', label: 'Years of Excellence', Icon: Award },
+  { value: 20, suffix: '+', label: 'Projects Completed',  Icon: FolderCheck },
+  { value: 5,  suffix: '+', label: 'States Covered',      Icon: MapPin },
+  { value: 10,  suffix: '+', label: 'Expert Engineers',    Icon: HardHat },
+  { value: 5,  suffix: '+', label: 'Years of Excellence', Icon: Award },
   { value: 98,  suffix: '%', label: 'Client Satisfaction', Icon: ThumbsUp },
-  { value: 500, suffix: 'Cr+', label: 'Projects Value',   Icon: TrendingUp },
+  { value: 50, suffix: 'Cr+', label: 'Projects Value',   Icon: TrendingUp },
 ];
 
 /** Simple animated counter — replaces react-countup to avoid ESM interop issues */
