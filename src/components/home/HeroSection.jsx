@@ -1,16 +1,28 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown, Play, Shield, Award, TrendingUp } from 'lucide-react';
+import { ArrowRight, ChevronDown, Shield, Award, TrendingUp } from 'lucide-react';
+import heroVideo from '../../assets/Create_a_realistic_second_ci (1) (1).webm';
 import { fadeUp, stagger } from '../../utils/animations';
 
+const HERO_VIDEO = {
+  headline: 'Engineering\nthe Future',
+  sub: `India's premier geotechnical engineering firm delivering slope stabilization, rockfall mitigation, and ground solutions for critical infrastructure.`,
+  tag: 'Geotechnical Engineering',
+  cta: { label: 'Explore Services', path: '/services' },
+  video: heroVideo,
+  type: 'video',
+};
+
 const HERO_SLIDES = [
+  HERO_VIDEO,
   {
     headline: 'Engineering\nthe Future',
     sub: `India's premier geotechnical engineering firm delivering slope stabilization, rockfall mitigation, and ground solutions for critical infrastructure.`,
     tag: 'Geotechnical Engineering',
     cta: { label: 'Explore Services', path: '/services' },
     image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=85',
+    type: 'image',
   },
   {
     headline: 'Securing Every\nSlope & Ground',
@@ -18,6 +30,7 @@ const HERO_SLIDES = [
     tag: 'Infrastructure Excellence',
     cta: { label: 'View Projects', path: '/projects' },
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85',
+    type: 'image',
   },
   {
     headline: 'Spaces That\nInspire',
@@ -25,39 +38,89 @@ const HERO_SLIDES = [
     tag: 'Premium Interior Design',
     cta: { label: 'Interior Design', path: '/interior-design' },
     image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=85',
+    type: 'image',
   },
 ];
 
 const BADGES = [
   { icon: Shield, label: 'ISO Certified' },
-  { icon: Award, label: '150+ Projects' },
-  { icon: TrendingUp, label: '10+ Years' },
+  { icon: Award, label: '15+ Projects' },
+  { icon: TrendingUp, label: '5+ Years' },
 ];
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const autoRef = useRef(null);
+  const videoRef = useRef(null);
+
+  const clearAuto = () => {
+    if (autoRef.current) {
+      clearInterval(autoRef.current);
+      autoRef.current = null;
+    }
+  };
+
+  const startImageAuto = () => {
+    clearAuto();
+    autoRef.current = setInterval(() => {
+      setCurrent((c) => (c + 1) % HERO_SLIDES.length);
+    }, 6000);
+  };
 
   const goTo = (idx) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
+
+    if (idx === 0 && videoRef.current) {
+      try {
+        videoRef.current.currentTime = 0;
+        videoRef.current.play().catch(() => {});
+      } catch (_) {}
+    }
+
     setCurrent(idx);
     setTimeout(() => setIsTransitioning(false), 700);
   };
 
+  const handleVideoEnd = () => {
+    setCurrent((c) => (c + 1) % HERO_SLIDES.length);
+  };
+
+  // Single source of truth for the auto-advance timer.
+  // Whenever `current` changes we decide whether a timer should run,
+  // and — critically — we ALWAYS clear the previous timer on cleanup
+  // (not just when current === 0). That's what makes this loop forever
+  // instead of stalling: previously the cleanup only cleared the interval
+  // when leaving the video slide, so every image->image transition left
+  // its old interval running, stacking up multiple leaked intervals that
+  // fought each other and broke the video->images->video cycle.
   useEffect(() => {
-    autoRef.current = setInterval(() => {
-      setCurrent((c) => (c + 1) % HERO_SLIDES.length);
-    }, 6000);
-    return () => clearInterval(autoRef.current);
-  }, []);
+    if (current === 0) {
+      // Video slide: no timer needed, handleVideoEnd() advances us onward
+      clearAuto();
+
+      // Make sure the video actually plays from the start each time we
+      // land back on it (covers the loop-around case, not just manual goTo).
+      if (videoRef.current) {
+        try {
+          videoRef.current.currentTime = 0;
+          videoRef.current.play().catch(() => {});
+        } catch (_) {}
+      }
+    } else {
+      // Image slide: advance automatically every 6s
+      startImageAuto();
+    }
+
+    return () => clearAuto();
+  }, [current]);
 
   const slide = HERO_SLIDES[current];
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" aria-label="Hero Banner">
-      {/* Background Images */}
+      {/* Background Media */}
       {HERO_SLIDES.map((s, i) => (
         <div
           key={i}
@@ -65,12 +128,28 @@ export default function HeroSection() {
           style={{ opacity: i === current ? 1 : 0 }}
           aria-hidden="true"
         >
-          <img
-            src={s.image}
-            alt=""
-            className="w-full h-full object-cover"
-            loading={i === 0 ? 'eager' : 'lazy'}
-          />
+          {s.type === 'video' ? (
+            <video
+              ref={i === 0 ? videoRef : undefined}
+              src={s.video}
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              playsInline
+              loop={false}
+              controls={false}
+              disablePictureInPicture
+              onEnded={handleVideoEnd}
+              preload="auto"
+            />
+          ) : (
+            <img
+              src={s.image}
+              alt=""
+              className="w-full h-full object-cover"
+              loading={i <= 1 ? 'eager' : 'lazy'}
+            />
+          )}
         </div>
       ))}
 
@@ -159,8 +238,8 @@ export default function HeroSection() {
           className="hidden lg:flex flex-col gap-4 shrink-0"
         >
           {[
-            { value: '150+', label: 'Projects Completed' },
-            { value: '10+',  label: 'Years Experience' },
+            { value: '15+', label: 'Projects Completed' },
+            { value: '5+',  label: 'Years Experience' },
             { value: '98%',  label: 'Client Satisfaction' },
           ].map((stat) => (
             <div key={stat.label} className="glass px-7 py-5 text-center min-w-[160px]">
@@ -195,7 +274,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-
-
-
