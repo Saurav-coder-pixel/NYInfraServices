@@ -6,7 +6,7 @@ import { pageTransition, fadeUp, stagger, viewportOnce } from '../utils/animatio
 import PageHero from '../components/common/PageHero';
 import { SITE } from '../utils/constants';
 
-const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || 'https://formsubmit.co/ajax/sura767848@gmail.com';
+const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || 'https://formsubmit.co/ajax/nyinfraservices@gmail.com';
 const INITIAL_FORM = {
   name: '',
   email: '',

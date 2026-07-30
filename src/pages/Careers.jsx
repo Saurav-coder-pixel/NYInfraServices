@@ -139,7 +139,7 @@ export default function Careers() {
     try {
       const apiKey = import.meta.env.VITE_RESEND_API_KEY;
       const fromEmail = import.meta.env.VITE_RESEND_FROM_EMAIL || 'onboarding@resend.dev';
-      const toEmail = import.meta.env.VITE_RESEND_TO_EMAIL || 'sura767848@gmail.com';
+      const toEmail = import.meta.env.VITE_RESEND_TO_EMAIL || 'nyinfraservices@gmail.com';
 
       if (!apiKey) {
         throw new Error('Email delivery is not configured for this deployment yet. Add the Resend environment variables to send resumes.');

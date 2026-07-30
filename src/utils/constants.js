@@ -6,8 +6,8 @@ export const SITE = {
     'NY Infra Services is a premier geotechnical engineering and interior design company delivering world-class infrastructure solutions and transformative interior spaces across India.',
   phone: '+91-9899876659',
   phone2: '+91-9818521797',
-  email: 'sura767848@gmail.com',
-  email2: 'sura767848@gmail.com',
+  email: 'nyinfraservices@gmail.com',
+  email2: 'nyinfraservices@gmail.com',
   whatsapp: '+91-9899876659',
   address: '401, Tower B, Unitech Cyber Park, Sector 39, Gurugram, Haryana – 122003',
   googleMapsEmbed:
