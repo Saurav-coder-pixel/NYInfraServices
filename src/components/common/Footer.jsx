@@ -4,8 +4,7 @@ import { SITE, NAV_LINKS } from '../../utils/constants';
 
 const engineeringServices = [
   'Slope Stabilization', 'Rockfall Mitigation', 'Shoring Systems',
-  'Slope Protection', 'Reinforced Earth Walls', 'Foundation Engineering',
-  'Micro Piling', 'Piling', 'Geotechnical Investigation',
+  'Reinforced Earth Walls', 'Foundation Engineering', 'Geotechnical Investigation',
 ];
 
 const interiorServices = [

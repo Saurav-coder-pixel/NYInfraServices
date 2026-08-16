@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin, Calendar, Tag } from 'lucide-react';
+import { ArrowRight, Tag } from 'lucide-react';
 import { fadeUp, stagger, viewportOnce } from '../../utils/animations';
 import { projects, projectCategories } from '../../data/projects';
 import SectionHeading from '../common/SectionHeading';
@@ -19,9 +19,9 @@ export default function FeaturedProjects() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 gap-6">
           <SectionHeading
             badge="Our Work"
-            title="Featured Projects"
-            highlight="Projects"
-            subtitle="Landmark infrastructure and interior design projects delivered with engineering excellence."
+            title="Featured Work"
+            highlight="Work"
+            subtitle="A selection of our technical works in geotechnical engineering, slope stabilization, foundation systems, and underground infrastructure."
           />
           <Link to="/projects" className="btn-outline shrink-0 self-start lg:self-auto">
             View All Projects <ArrowRight size={15} />
@@ -80,13 +80,10 @@ export default function FeaturedProjects() {
                 <h3 className="font-display font-bold text-base text-neutral-900 mb-3 group-hover:text-primary transition-colors leading-snug line-clamp-2">
                   {project.title}
                 </h3>
-                <div className="flex flex-wrap gap-3 text-xs text-secondary mb-4">
-                  <span className="flex items-center gap-1">
-                    <MapPin size={11} /> {project.location}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar size={11} /> {project.year}
-                  </span>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="tag bg-neutral-100 text-neutral-900 text-xs">{tag}</span>
+                  ))}
                 </div>
                 <p className="text-secondary text-sm leading-relaxed mb-4 line-clamp-2">
                   {project.scope}
@@ -95,7 +92,7 @@ export default function FeaturedProjects() {
                   to={`/projects/${project.id}`}
                   className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all duration-200"
                 >
-                  View Project <ArrowRight size={14} />
+                  View Details <ArrowRight size={14} />
                 </Link>
               </div>
             </motion.article>

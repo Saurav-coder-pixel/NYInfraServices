@@ -8,7 +8,6 @@ import InteriorServicesSection from '../components/home/InteriorServicesSection'
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import FeaturedProjects from '../components/home/FeaturedProjects';
 import StatsSection from '../components/home/StatsSection';
-import IndustriesSection from '../components/home/IndustriesSection';
 import WorkProcess from '../components/home/WorkProcess';
 import ClientLogos from '../components/home/ClientLogos';
 import Testimonials from '../components/home/Testimonials';
@@ -34,7 +33,6 @@ export default function Home() {
       <InteriorServicesSection />
       <WhyChooseUs />
       <FeaturedProjects />
-      <IndustriesSection />
       <WorkProcess />
       <ClientLogos />
       <Testimonials />

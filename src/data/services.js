@@ -8,7 +8,7 @@ export const engineeringServices = [
     description:
       'Comprehensive slope stabilization solutions including soil nailing, ground anchors, retaining structures, and drainage systems to protect infrastructure from landslides and erosion.',
     icon: 'Mountain',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1541888086425-d81bb19240f5?w=800&q=80',
     features: [
       'Soil nailing & ground anchors',
       'Drainage system design',
@@ -27,7 +27,7 @@ export const engineeringServices = [
     description:
       'Advanced rockfall protection systems including high-energy absorption barriers, drapery nets, and hybrid systems designed to stop high-velocity rockfalls and debris flows.',
     icon: 'Shield',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
     features: [
       'High-energy barrier systems',
       'Drapery netting solutions',
@@ -46,7 +46,7 @@ export const engineeringServices = [
     description:
       'Custom-engineered shoring solutions for deep excavations, underground structures, and basement constructions ensuring structural integrity and worker safety.',
     icon: 'Columns',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80',
     features: [
       'Sheet pile walls',
       'Soldier pile & lagging',
@@ -58,25 +58,6 @@ export const engineeringServices = [
     applications: ['Metro Projects', 'Airports', 'Commercial Buildings', 'Tunnels'],
   },
   {
-    id: 'slope-protection',
-    title: 'Slope Protection',
-    slug: 'slope-protection',
-    tagline: 'Long-term surface & structural protection',
-    description:
-      'Surface protection systems for slopes using shotcrete, geosynthetics, bioengineering, and vegetation techniques to prevent long-term erosion and weathering.',
-    icon: 'Layers',
-    image: 'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&q=80',
-    features: [
-      'Shotcrete & reinforced concrete',
-      'Geosynthetic slope cover',
-      'Bioengineering methods',
-      'Riprap protection',
-      'Flexible facing systems',
-      'Vegetation reinforcement',
-    ],
-    applications: ['Highways', 'Railways', 'Hydro Projects', 'Urban Development'],
-  },
-  {
     id: 'reinforced-earth-walls',
     title: 'Reinforced Earth Walls',
     slug: 'reinforced-earth-walls',
@@ -84,7 +65,7 @@ export const engineeringServices = [
     description:
       'Design and construction of Mechanically Stabilized Earth (MSE) walls and reinforced soil structures for highway embankments, bridge abutments, and retaining walls.',
     icon: 'Building2',
-    image: 'https://images.unsplash.com/photo-1468436139062-f60a71c5c892?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1584466977773-e625c37cdd50?w=800&q=80',
     features: [
       'MSE wall design & construction',
       'Precast concrete face panels',
@@ -103,54 +84,16 @@ export const engineeringServices = [
     description:
       'Complete foundation engineering services from geotechnical investigation to deep foundation design and execution for commercial, industrial, and infrastructure projects.',
     icon: 'Landmark',
-    image: 'https://images.unsplash.com/photo-1590736704728-f4730bb30770?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80',
     features: [
       'Deep foundation design',
       'Foundation load analysis',
-      'Settlement analysis',
+      'Micro piling & driven piles',
       'Soil improvement techniques',
       'Underpinning solutions',
-      'Foundation monitoring',
+      'Bored cast-in-situ piles',
     ],
     applications: ['Bridges', 'Skyscrapers', 'Industrial Plants', 'Infrastructure'],
-  },
-  {
-    id: 'micro-piling',
-    title: 'Micro Piling',
-    slug: 'micro-piling',
-    tagline: 'Precision piling in constrained spaces',
-    description:
-      'High-capacity micro pile solutions for restricted access sites, underpinning existing structures, and seismic retrofitting where conventional piling is not feasible.',
-    icon: 'ArrowDownToLine',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-    features: [
-      'Grouted micro piles',
-      'Underpinning systems',
-      'Seismic retrofitting',
-      'High inclined micro piles',
-      'Restricted access drilling',
-      'Load capacity testing',
-    ],
-    applications: ['Heritage Buildings', 'Urban Retrofit', 'Railways', 'Bridges'],
-  },
-  {
-    id: 'piling',
-    title: 'Piling',
-    slug: 'piling',
-    tagline: 'Driven & bored pile excellence',
-    description:
-      'Full spectrum piling services including bored cast-in-situ piles, driven piles, and CFA piles for high-capacity foundation systems across all soil conditions.',
-    icon: 'MoveDown',
-    image: 'https://images.unsplash.com/photo-1590736704728-f4730bb30770?w=800&q=80',
-    features: [
-      'Bored cast-in-situ piles',
-      'Driven precast concrete piles',
-      'CFA piles',
-      'Large diameter piles',
-      'Pile load testing',
-      'Pile integrity testing',
-    ],
-    applications: ['Bridges', 'High-Rise Buildings', 'Flyovers', 'Marine Structures'],
   },
   {
     id: 'geotechnical-investigation',
@@ -160,7 +103,7 @@ export const engineeringServices = [
     description:
       'Comprehensive geotechnical site investigations including soil exploration, laboratory testing, in-situ testing, and geotechnical reporting for all types of projects.',
     icon: 'ScanLine',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1530982011887-3cc11cc85693?w=800&q=80',
     features: [
       'Borehole drilling & logging',
       'Standard Penetration Tests (SPT)',

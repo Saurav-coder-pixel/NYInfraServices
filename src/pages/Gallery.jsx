@@ -8,25 +8,19 @@ import CTASection from '../components/home/CTASection';
 import { SITE } from '../utils/constants';
 
 const GALLERY_IMAGES = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',  cat: 'Infrastructure', title: 'Highway Construction' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',  cat: 'Infrastructure', title: 'Slope Stabilization' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80', cat: 'Infrastructure', title: 'Railway Engineering' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',  cat: 'Infrastructure', title: 'Shoring Works' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1590736704728-f4730bb30770?w=800&q=80', cat: 'Infrastructure', title: 'Foundation Piling' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',  cat: 'Infrastructure', title: 'Mountain Road' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1468436139062-f60a71c5c892?w=800&q=80',  cat: 'Infrastructure', title: 'MSE Wall' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&q=80',  cat: 'Infrastructure', title: 'Slope Protection' },
-  { id: 9, src: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80',  cat: 'Interior', title: 'Luxury Living Room' },
-  { id: 10, src: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80', cat: 'Interior', title: 'Master Bedroom' },
-  { id: 11, src: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80', cat: 'Interior', title: 'Living Space' },
-  { id: 12, src: 'https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800&q=80', cat: 'Interior', title: 'Modern Office' },
-  { id: 13, src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe2fa?w=800&q=80', cat: 'Interior', title: 'Hotel Lobby' },
-  { id: 14, src: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80', cat: 'Interior', title: 'Retail Store' },
-  { id: 15, src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', cat: 'Interior', title: 'Modular Kitchen' },
-  { id: 16, src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80', cat: 'Interior', title: 'False Ceiling Design' },
+  { id: 1, src: '/cable-anchor-1.jpeg', cat: 'Infrastructure', title: 'Cable Anchor Installation' },
+  { id: 2, src: '/cable-anchor-2.jpeg', cat: 'Infrastructure', title: 'Cable Anchor System' },
+  { id: 3, src: '/micropile.jpeg', cat: 'Infrastructure', title: 'Micropile Foundation Work' },
+  { id: 4, src: '/rs-wall.jpeg', cat: 'Infrastructure', title: 'Retaining Structure Wall' },
+  { id: 5, src: '/sdra-drilling.jpeg', cat: 'Infrastructure', title: 'SDRA Drilling Operations' },
+  { id: 6, src: '/site-photo-1.jpeg', cat: 'Infrastructure', title: 'Project Site View' },
+  { id: 7, src: '/site-photo-2.jpeg', cat: 'Infrastructure', title: 'Site Progress Overview' },
+  { id: 8, src: '/site-photo-3.jpeg', cat: 'Infrastructure', title: 'Site Construction Phase' },
+  { id: 9, src: '/slope-sdra-installation.jpeg', cat: 'Infrastructure', title: 'Slope SDRA Installation' },
+  { id: 10, src: '/structure-work.jpeg', cat: 'Infrastructure', title: 'Structural Work Progress' },
 ];
 
-const CATS = ['All', 'Infrastructure', 'Interior'];
+const CATS = ['All', 'Infrastructure'];
 
 export default function Gallery() {
   const [activecat, setActiveCat] = useState('All');

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, ArrowLeft, Layers, Mountain, Shield, Building2, Landmark, MoveDown, ScanLine } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ArrowLeft, Layers, Mountain, Shield, Building2, Landmark, MoveDown, ScanLine, Layout } from 'lucide-react';
 import { pageTransition, fadeUp, fadeLeft, stagger, viewportOnce } from '../utils/animations';
 import PageHero from '../components/common/PageHero';
 import SectionHeading from '../components/common/SectionHeading';
@@ -16,22 +16,22 @@ function AllServices() {
   return (
     <>
       <Helmet>
-        <title>Engineering Services – {SITE.name}</title>
-        <meta name="description" content="Comprehensive geotechnical engineering services: slope stabilization, rockfall mitigation, shoring, piling, MSE walls, and geotechnical investigation." />
+        <title>Our Services – {SITE.name}</title>
+        <meta name="description" content="Comprehensive geotechnical engineering services and premium interior design." />
       </Helmet>
       <PageHero
-        title="Engineering Services"
-        subtitle="Geotechnical and civil engineering solutions for India's most critical infrastructure projects."
+        title="Our Services"
+        subtitle="Geotechnical engineering and interior design solutions for India's most critical infrastructure projects."
         breadcrumbs={[{ label: 'Services' }]}
-        image="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1920&q=80"
+        image="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?w=1920&q=80"
       />
       <section className="section">
         <div className="container-custom">
           <SectionHeading
-            badge="Geotechnical Excellence"
-            title="Our Engineering Services"
-            highlight="Engineering Services"
-            subtitle="From slope stabilization to deep foundation engineering — comprehensive solutions for every ground challenge."
+            badge="Our Expertise"
+            title="Our Services"
+            highlight="Services"
+            subtitle="Comprehensive geotechnical engineering solutions and premium interior design for every project challenge."
             align="center"
           />
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewportOnce}
@@ -54,6 +54,19 @@ function AllServices() {
                 </motion.div>
               );
             })}
+            
+            {/* Interior Design Card */}
+            <motion.div variants={fadeUp} className="service-card group relative overflow-hidden">
+              <div className="overflow-hidden mb-5" style={{aspectRatio:'16/9'}}>
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Interior Design" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div className="icon-box mb-4"><Layout size={22} /></div>
+              <h3 className="font-display font-bold text-lg text-neutral-900 mb-2 group-hover:text-primary transition-colors">Interior Design</h3>
+              <p className="text-secondary text-sm leading-relaxed mb-4 line-clamp-3">Transforming spaces with bespoke interior design solutions. From luxury residential to modern commercial spaces, we deliver elegance and functionality.</p>
+              <Link to="/interior-design" className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all">
+                Learn More <ArrowRight size={14} />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
