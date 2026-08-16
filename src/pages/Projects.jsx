@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { ArrowLeft, MapPin, Calendar, Users, DollarSign, Clock, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, CheckCircle2, Wrench } from 'lucide-react';
 import { pageTransition, fadeUp, fadeLeft, stagger, viewportOnce } from '../utils/animations';
 import PageHero from '../components/common/PageHero';
 import SectionHeading from '../components/common/SectionHeading';
@@ -40,9 +40,10 @@ function ProjectCard({ project }) {
             ))}
           </ul>
         </div>
-        <div className="flex flex-wrap gap-3 text-xs text-secondary">
-          <span className="flex items-center gap-1"><MapPin size={11} /> {project.location}</span>
-          <span className="flex items-center gap-1"><Calendar size={11} /> {project.year}</span>
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span key={tag} className="tag bg-neutral-100 text-neutral-900 text-xs">{tag}</span>
+          ))}
         </div>
       </div>
     </motion.article>
@@ -120,24 +121,23 @@ function ProjectDetailPage({ project }) {
             {/* Sidebar */}
             <div>
               <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={viewportOnce} className="bg-neutral-50 p-6 mb-6">
-                <h3 className="font-display font-bold text-base uppercase tracking-wider text-neutral-900 mb-5">Project Details</h3>
-                {[
-                  { icon: Users, label: 'Client', value: project.client },
-                  { icon: MapPin, label: 'Location', value: project.location },
-                  { icon: Calendar, label: 'Year', value: project.year },
-                  { icon: Clock, label: 'Duration', value: project.duration },
-                  { icon: DollarSign, label: 'Project Value', value: project.value },
-                ].map(({ icon: Icon, label, value }) => (
-                  <div key={label} className="flex items-start gap-3 py-3 border-b border-neutral-200 last:border-0">
-                    <Icon size={16} className="text-accent shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-xs text-secondary uppercase tracking-wider">{label}</p>
-                      <p className="font-semibold text-sm text-neutral-900 mt-0.5">{value}</p>
-                    </div>
+                <h3 className="font-display font-bold text-base uppercase tracking-wider text-neutral-900 mb-5">Work Details</h3>
+                <div className="mb-4">
+                  <p className="text-xs text-secondary uppercase tracking-wider mb-2">Work Category</p>
+                  <p className="font-semibold text-sm text-neutral-900">{project.subcategory}</p>
+                </div>
+                <div className="mb-4">
+                  <p className="text-xs text-secondary uppercase tracking-wider mb-2">Status</p>
+                  <p className="font-semibold text-sm text-neutral-900">{project.status}</p>
+                </div>
+                <div className="mb-5">
+                  <p className="text-xs text-secondary uppercase tracking-wider mb-2">Technical Stack</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.technology.map((tech) => <span key={tech} className="tag text-xs">{tech}</span>)}
                   </div>
-                ))}
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => <span key={tag} className="tag text-xs">{tag}</span>)}
+                </div>
+                <div className="flex flex-wrap gap-1.5 border-t border-neutral-200 pt-4">
+                  {project.tags.map((tag) => <span key={tag} className="tag bg-neutral-100 text-neutral-900 text-xs">{tag}</span>)}
                 </div>
               </motion.div>
 

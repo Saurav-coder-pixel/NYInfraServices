@@ -16,12 +16,12 @@ const VALUES = [
   { icon: CheckCircle2, title: 'Safety', desc: 'Zero-compromise safety culture across all operations — protecting our teams, clients, and the environment.' },
 ];
 
-const TEAM = [
-  { name: 'Narendra Y.', role: 'Founder & CEO', image: 'https://i.pravatar.cc/300?img=33', desc: '20+ years in geotechnical engineering across India and international markets.' },
-  { name: 'Vikram Anand', role: 'Chief Engineer', image: 'https://i.pravatar.cc/300?img=34', desc: 'M.Tech Geotechnical Engineering, IIT Delhi. Expert in slope stability and deep foundations.' },
-  { name: 'Priya Menon', role: 'Head of Interior Design', image: 'https://i.pravatar.cc/300?img=35', desc: '12 years luxury interior design experience across residential and hospitality sectors.' },
-  { name: 'Rajan Sharma', role: 'Director – Projects', image: 'https://i.pravatar.cc/300?img=36', desc: 'Expert project director with experience across BRO, NHAI, and DMRC mega-projects.' },
-];
+const FOUNDER = {
+  name: 'Neeraj Singh Suryavanshi',
+  role: 'Founder',
+  image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
+  desc: '15+ years of rigorous geotechnical and infrastructure engineering expertise, leading critical projects in high-altitude, glaciated terrains and complex environments across India.',
+};
 
 export default function About() {
   return (
@@ -33,7 +33,7 @@ export default function About() {
 
       <PageHero
         title="About NY Infra Services"
-        subtitle="Pioneering geotechnical engineering and premium interior design across India since 2015."
+        subtitle="Pioneering geotechnical engineering and premium interior design across India."
         breadcrumbs={[{ label: 'About Us' }]}
         image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
       />
@@ -49,22 +49,23 @@ export default function About() {
               </motion.h2>
               <motion.div variants={fadeUp} className="line-accent" />
               <motion.p variants={fadeUp} className="text-secondary leading-relaxed mb-4">
-                Founded in 2015 by Narendra Y., NY Infra Services began as a specialized geotechnical engineering consultancy with a vision to bring international standards to India's infrastructure sector.
-              </motion.p>
-              <motion.p variants={fadeUp} className="text-secondary leading-relaxed mb-4">
-                Over the decade, we have grown into a multi-disciplinary firm with two core verticals: <strong className="text-primary">Geotechnical & Infrastructure Engineering</strong> and <strong className="text-yellow-700">Premium Interior Design</strong> — each delivering Fortune-500 quality outcomes.
+                <strong className="text-primary">NY INFRA SERVICES</strong> is a premier, technically-driven geotechnical and infrastructure engineering firm. Built on a solid foundation of over 15 years of rigorous industry expertise, we specialize in delivering high-end, sustainable engineering solutions for the most complex terrains and structural challenges.
               </motion.p>
               <motion.p variants={fadeUp} className="text-secondary leading-relaxed mb-6">
-                From securing slopes along the Konkan Railway to designing luxury villas in Gurugram and boutique hotels in Jaipur — our portfolio spans the full breadth of India's growth story.
+                Our core leadership carries a distinguished track record of executing critically important infrastructure projects in some of the world's most hostile and glaciated terrains (including prestigious border infrastructure in Ladakh). We bring this same level of military-grade precision, zero-tolerance safety, and engineering excellence to every project we undertake.
               </motion.p>
-              <motion.ul variants={stagger} className="space-y-3">
-                {['Headquarters in Gurugram, Haryana', 'Operations across 25+ states', '50+ engineers & designers on staff', '₹500 Crore+ total project value'].map((item) => (
-                  <motion.li key={item} variants={fadeUp} className="flex items-center gap-3 text-sm">
-                    <CheckCircle2 size={16} className="text-accent shrink-0" />
-                    {item}
-                  </motion.li>
-                ))}
-              </motion.ul>
+              
+              <motion.div variants={fadeUp} className="bg-primary/5 p-6 border-l-4 border-primary mb-6">
+                <h3 className="font-display font-bold text-lg text-neutral-900 mb-2">Our Mission</h3>
+                <p className="text-secondary leading-relaxed mb-4">
+                  To secure infrastructure, mitigate geological risks, and provide permanent stability to challenging terrains through innovation, integrity, and elite engineering.
+                </p>
+                <blockquote className="text-primary font-medium italic border-l-2 border-accent pl-4">
+                  “Great infrastructure is not built by machines alone; it is built by vision, dedication, and the people behind it.”
+                </blockquote>
+                <p className="text-sm font-bold text-neutral-900 mt-2 ml-4">Neeraj, Founder – NY Infra</p>
+              </motion.div>
+              
             </motion.div>
 
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewportOnce} className="space-y-4">
@@ -74,20 +75,6 @@ export default function About() {
                 <motion.img variants={fadeLeft} src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=600&q=80" alt="Infrastructure" className="w-full h-40 object-cover" loading="lazy" />
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="section-sm bg-neutral-50 border-y border-neutral-100">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
-            {STATS.map((stat) => (
-              <div key={stat.label} className="p-4">
-                <div className="font-display font-black text-4xl text-primary">{stat.value}{stat.suffix}</div>
-                <div className="text-secondary text-xs uppercase tracking-wider mt-1">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -113,24 +100,42 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Leadership */}
       <section className="section bg-neutral-50">
         <div className="container-custom">
-          <SectionHeading badge="Leadership" title="Our Expert Team" highlight="Expert Team" subtitle="The experienced professionals who bring vision, technical mastery, and passion to every project." align="center" />
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewportOnce} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TEAM.map((member) => (
-              <motion.div key={member.name} variants={fadeUp} className="card group text-center overflow-hidden">
-                <div className="overflow-hidden" style={{aspectRatio:'1/1'}}>
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display font-bold text-base text-neutral-900">{member.name}</h3>
-                  <p className="text-primary text-xs font-semibold uppercase tracking-wider mb-2">{member.role}</p>
-                  <div className="w-8 h-0.5 bg-accent mx-auto mb-2" />
-                  <p className="text-secondary text-xs leading-relaxed">{member.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          <SectionHeading
+            badge="Leadership"
+            title="Founder & Leadership"
+            highlight="Leadership"
+            subtitle="Driven by vision, technical mastery, and dedication to engineering excellence."
+            align="center"
+          />
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="flex justify-center mt-6"
+          >
+            <motion.div
+              variants={fadeUp}
+              className="card group text-center overflow-hidden max-w-md w-full border border-neutral-200 hover:border-accent shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <div className="overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                <img
+                  src={FOUNDER.image}
+                  alt={FOUNDER.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-display font-bold text-xl text-neutral-900">{FOUNDER.name}</h3>
+                <p className="text-primary text-xs font-semibold uppercase tracking-wider mb-2 mt-1">{FOUNDER.role}</p>
+                <div className="w-10 h-0.5 bg-accent mx-auto mb-3" />
+                <p className="text-secondary text-sm leading-relaxed">{FOUNDER.desc}</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

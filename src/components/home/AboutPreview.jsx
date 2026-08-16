@@ -4,10 +4,8 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { fadeRight, fadeLeft, fadeUp, stagger, viewportOnce } from '../../utils/animations';
 
 const STRENGTHS = [
-  'Over 150 successfully completed projects across India',
   'ISO 9001, 14001 & 45001 certified operations',
   'Expert team of geotechnical and design professionals',
-  'Pan-India presence with projects in 25+ states',
   'Dual expertise: Engineering + Interior Design',
 ];
 
@@ -54,7 +52,7 @@ export default function AboutPreview() {
               variants={fadeUp}
               className="absolute -bottom-6 -right-6 bg-accent p-6 text-primary text-center shadow-accent"
             >
-              <div className="font-display font-black text-4xl">10+</div>
+              <div className="font-display font-black text-4xl">15+</div>
               <div className="text-xs font-bold uppercase tracking-wider mt-1">Years of Excellence</div>
             </motion.div>
           </motion.div>
@@ -77,13 +75,13 @@ export default function AboutPreview() {
             <motion.div variants={fadeUp} className="line-accent" />
 
             <motion.p variants={fadeUp} className="text-secondary text-base leading-relaxed mb-4">
-              NY Infra Services is a premier engineering and design firm headquartered in Gurugram,
+              NY Infra Services is a premier engineering and design firm headquartered in Delhi,
               India. We specialize in geotechnical engineering solutions for India's most critical
               infrastructure — railways, highways, airports, metro, and hydropower — while also
-              delivering premium interior design for residential, commercial, and hospitality clients.
+              delivering interior design for residential, commercial, and hospitality clients.
             </motion.p>
             <motion.p variants={fadeUp} className="text-secondary text-base leading-relaxed mb-6">
-              With a team of 50+ expert engineers and designers, we combine technical rigor,
+              With a team of 20+ expert engineers and designers, we combine technical rigor,
               innovative thinking, and unwavering commitment to quality to deliver projects that stand
               the test of time.
             </motion.p>
