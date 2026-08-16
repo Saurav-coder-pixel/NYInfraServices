@@ -6,7 +6,6 @@ import { pageTransition, fadeUp, stagger, viewportOnce } from '../utils/animatio
 import PageHero from '../components/common/PageHero';
 import { SITE } from '../utils/constants';
 
-const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || 'https://formsubmit.co/ajax/sura767848@gmail.com';
 const INITIAL_FORM = {
   name: '',
   email: '',
@@ -63,6 +62,7 @@ export default function Contact() {
 
     try {
       const payload = new URLSearchParams({
+        'form-name': 'contact',
         name: form.name.trim(),
         email: form.email.trim(),
         phone: form.phone.trim(),
@@ -70,18 +70,12 @@ export default function Contact() {
         subject: form.subject.trim(),
         enquiry: form.enquiry.trim(),
         message: form.message.trim(),
-        _replyto: form.email.trim(),
-        _subject: `Website enquiry from ${form.name.trim()} - ${form.subject.trim()}`,
-        _captcha: 'false',
       });
 
-      const response = await fetch(CONTACT_ENDPOINT, {
+      const response = await fetch('/', {
         method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: payload,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload.toString(),
       });
 
       if (!response.ok) {

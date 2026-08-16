@@ -2,12 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-[build.environment]
-  VITE_CONTACT_FORM_ENDPOINT = "https://formsubmit.co/ajax/sura767848@gmail.com"
-
-[functions]
-  directory = "netlify/functions"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
