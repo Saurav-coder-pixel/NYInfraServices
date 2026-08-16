@@ -8,7 +8,7 @@ export const engineeringServices = [
     description:
       'Comprehensive slope stabilization solutions including soil nailing, ground anchors, retaining structures, and drainage systems to protect infrastructure from landslides and erosion.',
     icon: 'Mountain',
-    image: 'https://images.unsplash.com/photo-1541888086425-d81bb19240f5?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1758858534177-ac4a1cb29263?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2xvcGUlMjBTdGFiaWxpemF0aW9ufGVufDB8fDB8fHww',
     features: [
       'Soil nailing & ground anchors',
       'Drainage system design',
@@ -27,7 +27,7 @@ export const engineeringServices = [
     description:
       'Advanced rockfall protection systems including high-energy absorption barriers, drapery nets, and hybrid systems designed to stop high-velocity rockfalls and debris flows.',
     icon: 'Shield',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    image: 'https://plus.unsplash.com/premium_photo-1663045584825-90a22961a4de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fFJvY2tmYWxsJTIwTWl0aWdhdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
     features: [
       'High-energy barrier systems',
       'Drapery netting solutions',
@@ -65,7 +65,7 @@ export const engineeringServices = [
     description:
       'Design and construction of Mechanically Stabilized Earth (MSE) walls and reinforced soil structures for highway embankments, bridge abutments, and retaining walls.',
     icon: 'Building2',
-    image: 'https://images.unsplash.com/photo-1584466977773-e625c37cdd50?w=800&q=80',
+    image: 'https://plus.unsplash.com/premium_photo-1742461205048-5ed88d1eb4b7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UmVpbmZvcmNlZCUyMEVhcnRoJTIwV2FsbHN8ZW58MHx8MHx8fDA%3D',
     features: [
       'MSE wall design & construction',
       'Precast concrete face panels',
@@ -103,7 +103,7 @@ export const engineeringServices = [
     description:
       'Comprehensive geotechnical site investigations including soil exploration, laboratory testing, in-situ testing, and geotechnical reporting for all types of projects.',
     icon: 'ScanLine',
-    image: 'https://images.unsplash.com/photo-1530982011887-3cc11cc85693?w=800&q=80',
+    image: 'https://plus.unsplash.com/premium_photo-1711652434149-6ed8bcd674a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8R2VvdGVjaG5pY2FsJTIwSW52ZXN0aWdhdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
     features: [
       'Borehole drilling & logging',
       'Standard Penetration Tests (SPT)',
