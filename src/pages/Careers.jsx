@@ -137,42 +137,25 @@ export default function Careers() {
     setResumeError('');
 
     try {
-      const apiKey = import.meta.env.VITE_RESEND_API_KEY;
-      const fromEmail = import.meta.env.VITE_RESEND_FROM_EMAIL || 'onboarding@resend.dev';
-      const toEmail = import.meta.env.VITE_RESEND_TO_EMAIL || 'nyinfraservices@gmail.com';
-
-      if (!apiKey) {
-        throw new Error('Email delivery is not configured for this deployment yet. Add the Resend environment variables to send resumes.');
-      }
-
       const base64Content = await fileToBase64(resumeFile);
-      const response = await fetch('https://api.resend.com/emails', {
+
+      const response = await fetch('/.netlify/functions/send-resume', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          from: fromEmail,
-          to: [toEmail],
-          subject: `Resume Submission - ${resumeForm.role.trim()}`,
-          html: `
-            <p><strong>Name:</strong> ${resumeForm.fullName.trim()}</p>
-            <p><strong>Email:</strong> ${resumeForm.email.trim()}</p>
-            <p><strong>Phone:</strong> ${resumeForm.phone.trim()}</p>
-            <p><strong>Role Applied For:</strong> ${resumeForm.role.trim()}</p>
-            <p><strong>Cover Letter / Message:</strong><br />${(resumeForm.message || 'No cover letter provided.').trim()}</p>
-          `,
-          attachments: [{
-            filename: resumeFile.name,
-            content: base64Content,
-          }],
+          fullName: resumeForm.fullName.trim(),
+          email: resumeForm.email.trim(),
+          phone: resumeForm.phone.trim(),
+          role: resumeForm.role.trim(),
+          message: (resumeForm.message || '').trim(),
+          fileName: resumeFile.name,
+          fileContent: base64Content,
         }),
       });
 
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data.message || 'Unable to send the resume at this time.');
+        throw new Error(data.error || 'Unable to send the resume at this time.');
       }
 
       setResumeStatus('success');
