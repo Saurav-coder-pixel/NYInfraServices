@@ -107,13 +107,6 @@ export default function Careers() {
     }
   };
 
-  const fileToBase64 = (file) => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result.split(',')[1]);
-    reader.onerror = () => reject(new Error('Unable to read the selected file.'));
-    reader.readAsDataURL(file);
-  });
-
   const handleResumeSubmit = async (e) => {
     e.preventDefault();
 
@@ -137,25 +130,22 @@ export default function Careers() {
     setResumeError('');
 
     try {
-      const base64Content = await fileToBase64(resumeFile);
+      const formData = new FormData();
+      formData.append('form-name', 'resume-submission');
+      formData.append('fullName', resumeForm.fullName.trim());
+      formData.append('email', resumeForm.email.trim());
+      formData.append('phone', resumeForm.phone.trim());
+      formData.append('role', resumeForm.role.trim());
+      formData.append('message', (resumeForm.message || '').trim());
+      formData.append('resume', resumeFile);
 
-      const response = await fetch('/.netlify/functions/send-resume', {
+      const response = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fullName: resumeForm.fullName.trim(),
-          email: resumeForm.email.trim(),
-          phone: resumeForm.phone.trim(),
-          role: resumeForm.role.trim(),
-          message: (resumeForm.message || '').trim(),
-          fileName: resumeFile.name,
-          fileContent: base64Content,
-        }),
+        body: formData,
       });
 
-      const data = await response.json();
       if (!response.ok) {
-        throw new Error(data.error || 'Unable to send the resume at this time.');
+        throw new Error('Unable to send the resume at this time. Please try again later.');
       }
 
       setResumeStatus('success');
