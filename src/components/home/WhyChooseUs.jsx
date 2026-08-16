@@ -1,58 +1,71 @@
 import { motion } from 'framer-motion';
-import { Shield, Users, Clock, Globe, Award, Zap, CheckCircle2 } from 'lucide-react';
+import { Shield, Users, Clock, Globe, Award, Zap, CheckCircle2, ShieldCheck, Leaf } from 'lucide-react';
 import { fadeUp, fadeLeft, fadeRight, stagger, viewportOnce } from '../../utils/animations';
-import SectionHeading from '../common/SectionHeading';
 
 const REASONS = [
   {
     icon: Award,
     title: 'Proven Delivery Excellence',
-    desc: 'A legacy of landmark infrastructure and design outcomes delivered across complex terrains, high-risk sites, and premium client environments.',
-    color: 'bg-primary/10 text-primary',
+    desc: 'A legacy of successfully infrastructure and design execution delivered across complex terminals, highways, dams, and premium client environments.',
+    iconBg: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    accent: 'bg-blue-600',
   },
   {
     icon: Users,
     title: 'Specialist Leadership',
-    desc: 'A multidisciplinary team of engineers, designers, and project leaders combining deep technical know-how with execution discipline.',
-    color: 'bg-accent/20 text-yellow-700',
+    desc: 'A multidisciplinary team of engineers, designers, and project leaders delivering deep technical expertise with execution discipline.',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    accent: 'bg-amber-500',
   },
   {
     icon: Shield,
     title: 'Safety & Compliance',
-    desc: 'Certified systems, stringent site protocols, and a zero-compromise approach to quality, safety, and environmental responsibility.',
-    color: 'bg-success/10 text-success',
+    desc: 'Certified systems, stringent risk protocols, and a zero-compromise approach to quality, safety, and environmental responsibility.',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    accent: 'bg-emerald-600',
   },
   {
     icon: Globe,
     title: 'Pan-India Capability',
-    desc: 'Operational reach across challenging geographies, from Himalayan slopes and border corridors to urban metro and aviation infrastructure.',
-    color: 'bg-primary/10 text-primary',
+    desc: 'Operational reach across states and regions with a strong local network, capable resources, and consistent execution standards.',
+    iconBg: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    accent: 'bg-blue-600',
   },
   {
     icon: Clock,
     title: 'Reliable Execution',
     desc: 'Structured project controls, transparent communication, and rigorous planning ensure delivery on time and within scope.',
-    color: 'bg-accent/20 text-yellow-700',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    accent: 'bg-amber-500',
   },
   {
     icon: Zap,
     title: 'Integrated Engineering & Design',
-    desc: 'A rare blend of geotechnical engineering expertise and premium interior design capability, tailored to modern project demands.',
-    color: 'bg-success/10 text-success',
+    desc: 'A unified blend of geotechnical engineering expertise and premium interior design capability, tailored to modern project demands.',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    accent: 'bg-emerald-600',
   },
+];
+
+const CERT_BADGES = [
+  { icon: CheckCircle2, label: 'Quality Assured' },
+  { icon: ShieldCheck, label: 'Safety First' },
+  { icon: Leaf, label: 'Sustainable Future' },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="section relative overflow-hidden bg-slate-950 text-white">
-      {/* Dark background */}
-      <div className="absolute inset-0 bg-slate-950" />
-      <div className="absolute inset-0 bg-pattern-dark opacity-25 pointer-events-none" />
-
-      <div className="relative container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Heading + image */}
-          <div>
+    <section className="section bg-white">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+          {/* Left Column */}
+          <div className="lg:col-span-2">
             <motion.span
               variants={fadeRight}
               initial="hidden"
@@ -62,16 +75,18 @@ export default function WhyChooseUs() {
             >
               Why Choose Us
             </motion.span>
+
             <motion.h2
               variants={fadeRight}
               initial="hidden"
               whileInView="visible"
               viewport={viewportOnce}
-              className="font-display font-extrabold text-4xl lg:text-5xl text-white leading-tight mb-5"
+              className="font-display font-extrabold text-3xl lg:text-4xl xl:text-[2.75rem] text-neutral-900 leading-tight mb-4"
             >
               Built on Trust,<br />
-              <span className="text-accent">Driven by Precision</span>
+              <span className="text-accent italic">Driven by Precision</span>
             </motion.h2>
+
             <motion.div
               variants={fadeRight}
               initial="hidden"
@@ -79,52 +94,82 @@ export default function WhyChooseUs() {
               viewport={viewportOnce}
               className="w-14 h-1 bg-accent mb-6"
             />
+
             <motion.p
               variants={fadeRight}
               initial="hidden"
               whileInView="visible"
               viewport={viewportOnce}
-              className="text-slate-200 text-base leading-relaxed mb-8 max-w-2xl"
+              className="text-secondary text-base leading-relaxed mb-10"
             >
-              NY Infra Services combines technical depth, refined execution, and client-first service to deliver resilient, elegant infrastructure and interiors. Our clients rely on us for projects that demand precision, accountability, and premium delivery.
+              NY Infra Services combines technical depth, refined execution, and
+              client-first service to deliver reliable, elegant infrastructure and interiors.
+              Our clients rely on us for projects that demand precision, accountability,
+              and premium delivery.
             </motion.p>
 
+            {/* ISO Certification Card */}
             <motion.div
               variants={fadeRight}
               initial="hidden"
               whileInView="visible"
               viewport={viewportOnce}
-              className="relative overflow-hidden rounded-[1.25rem] border border-white/10 shadow-2xl"
+              className="relative overflow-hidden rounded-2xl shadow-lg"
             >
               <img
                 src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&q=80"
-                alt="NY Infra Services Team at Work"
-                className="w-full h-72 object-cover"
+                alt="NY Infra Services Engineering"
+                className="w-full h-64 object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-slate-950/40" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-5 flex flex-col gap-3 shadow-card">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/15 text-accent">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm uppercase tracking-[0.2em] text-white/60 mb-2">Trusted Standards</p>
-                    <p className="text-white font-semibold text-base">ISO 9001 · 14001 · 45001 Certified</p>
-                    <p className="text-white/70 text-xs mt-1">International quality, environmental responsibility, and safety compliance across every project.</p>
-                  </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/60 to-slate-900/30" />
+
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                {/* Badge */}
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-accent/20 text-accent mb-3">
+                  <CheckCircle2 size={20} />
+                </div>
+                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-white/50 font-bold mb-1">
+                  Trusted. Standards.
+                </p>
+                <h4 className="text-white font-display font-bold text-lg mb-1">
+                  ISO 9001 : 14001 : 45001 Certified
+                </h4>
+                <p className="text-white/60 text-xs leading-relaxed mb-5">
+                  Internationally recognized for environmental responsibility and
+                  safety compliance across every project.
+                </p>
+
+                {/* Three badges */}
+                <div className="grid grid-cols-3 gap-3">
+                  {CERT_BADGES.map((b) => {
+                    const BadgeIcon = b.icon;
+                    return (
+                      <div
+                        key={b.label}
+                        className="flex flex-col items-center gap-1.5 rounded-xl bg-white/10 backdrop-blur-sm py-3 px-2"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                          <BadgeIcon size={14} />
+                        </div>
+                        <span className="text-white/80 text-[0.6rem] font-semibold text-center leading-tight">
+                          {b.label}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Right: Reasons Grid */}
+          {/* Right Column — Reasons Grid */}
           <motion.div
             variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+            className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-5"
           >
             {REASONS.map((r) => {
               const Icon = r.icon;
@@ -132,15 +177,18 @@ export default function WhyChooseUs() {
                 <motion.div
                   key={r.title}
                   variants={fadeUp}
-                  className="rounded-[1rem] border border-white/10 bg-slate-900/90 p-6 hover:border-accent/40 hover:bg-slate-900/95 transition-all duration-300 group shadow-card"
+                  className="rounded-2xl border border-neutral-100 bg-white p-6 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full mb-4 ${r.color}`}>
+                  <div
+                    className={`inline-flex items-center justify-center w-12 h-12 rounded-full mb-4 ${r.iconBg} ${r.iconColor}`}
+                  >
                     <Icon size={22} />
                   </div>
-                  <h3 className="font-display font-bold text-lg text-white mb-3 group-hover:text-accent transition-colors">
+                  <h3 className="font-display font-bold text-base text-neutral-900 mb-2 group-hover:text-primary transition-colors">
                     {r.title}
                   </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed">{r.desc}</p>
+                  <div className={`w-8 h-0.5 ${r.accent} mb-3`} />
+                  <p className="text-secondary text-sm leading-relaxed">{r.desc}</p>
                 </motion.div>
               );
             })}
@@ -150,7 +198,3 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-
-
-
-

@@ -34,8 +34,8 @@ export default function Home() {
       <WhyChooseUs />
       <FeaturedProjects />
       <WorkProcess />
-      <ClientLogos />
-      <Testimonials />
+      {/* <ClientLogos /> */}
+      {/* <Testimonials /> */}
       <Certifications />
       <CTASection />
     </motion.main>
