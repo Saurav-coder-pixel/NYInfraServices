@@ -21,7 +21,7 @@ function TopBar() {
         </div>
         <div className="flex items-center gap-1.5 text-white/70">
           <MapPin size={12} />
-          <span>Gurugram, Haryana, India</span>
+          <span>Delhi, India</span>
         </div>
       </div>
     </div>
