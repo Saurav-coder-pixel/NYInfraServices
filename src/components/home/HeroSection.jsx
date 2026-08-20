@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Shield, Award, TrendingUp } from 'lucide-react';
 import heroImage from '../../assets/cable-anchor-2.jpeg';
+import heroImage1 from 'E:/NYInfraServices/public/micropile.jpeg';
+import heroImage2 from 'E:/NYInfraServices/public/rs-wall.jpeg';
 import { fadeUp, stagger } from '../../utils/animations';
 
 const HERO_SLIDES = [
@@ -19,7 +21,7 @@ const HERO_SLIDES = [
     sub: `India's premier geotechnical engineering firm delivering slope stabilization, rockfall mitigation, and ground solutions for critical infrastructure.`,
     tag: 'Geotechnical Engineering',
     cta: { label: 'Explore Services', path: '/services' },
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=85',
+    image: heroImage1,
     type: 'image',
   },
   {
@@ -27,7 +29,7 @@ const HERO_SLIDES = [
     sub: `From Himalayan highways to metro foundations — NY Infra Services protects India's most critical infrastructure with precision geo-engineering.`,
     tag: 'Infrastructure Excellence',
     cta: { label: 'View Projects', path: '/projects' },
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85',
+    image: heroImage2,
     type: 'image',
   },
   {
