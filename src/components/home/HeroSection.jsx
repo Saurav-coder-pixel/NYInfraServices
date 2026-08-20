@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Shield, Award, TrendingUp } from 'lucide-react';
 import heroImage from '../../assets/cable-anchor-2.jpeg';
-import heroImage1 from 'E:/NYInfraServices/public/micropile.jpeg';
-import heroImage2 from 'E:/NYInfraServices/public/rs-wall.jpeg';
+import heroImage1 from '../../assets/micropile.jpeg';
+import heroImage2 from '../../assets/rs-wall.jpeg';
 import { fadeUp, stagger } from '../../utils/animations';
 
 const HERO_SLIDES = [
