@@ -2,20 +2,18 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Shield, Award, TrendingUp } from 'lucide-react';
-import heroVideo from '../../assets/Create_a_realistic_second_ci (1) (1).webm';
+import heroImage from '../../assets/cable-anchor-2.jpeg';
 import { fadeUp, stagger } from '../../utils/animations';
 
-const HERO_VIDEO = {
-  headline: 'Engineering\nthe Future',
-  sub: `India's premier geotechnical engineering firm delivering slope stabilization, rockfall mitigation, and ground solutions for critical infrastructure.`,
-  tag: 'Geotechnical Engineering',
-  cta: { label: 'Explore Services', path: '/services' },
-  video: heroVideo,
-  type: 'video',
-};
-
 const HERO_SLIDES = [
-  HERO_VIDEO,
+  {
+    headline: 'Engineering\nthe Future',
+    sub: `India's premier geotechnical engineering firm delivering slope stabilization, rockfall mitigation, and ground solutions for critical infrastructure.`,
+    tag: 'Geotechnical Engineering',
+    cta: { label: 'Explore Services', path: '/services' },
+    image: heroImage,
+    type: 'image',
+  },
   {
     headline: 'Engineering\nthe Future',
     sub: `India's premier geotechnical engineering firm delivering slope stabilization, rockfall mitigation, and ground solutions for critical infrastructure.`,
@@ -40,6 +38,7 @@ const HERO_SLIDES = [
     image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=85',
     type: 'image',
   },
+
 ];
 
 const BADGES = [
@@ -52,7 +51,6 @@ export default function HeroSection() {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const autoRef = useRef(null);
-  const videoRef = useRef(null);
 
   const clearAuto = () => {
     if (autoRef.current) {
@@ -72,46 +70,12 @@ export default function HeroSection() {
     if (isTransitioning) return;
     setIsTransitioning(true);
 
-    if (idx === 0 && videoRef.current) {
-      try {
-        videoRef.current.currentTime = 0;
-        videoRef.current.play().catch(() => {});
-      } catch (_) {}
-    }
-
     setCurrent(idx);
     setTimeout(() => setIsTransitioning(false), 700);
   };
 
-  const handleVideoEnd = () => {
-    setCurrent((c) => (c + 1) % HERO_SLIDES.length);
-  };
-
-  // Single source of truth for the auto-advance timer.
-  // Whenever `current` changes we decide whether a timer should run,
-  // and — critically — we ALWAYS clear the previous timer on cleanup
-  // (not just when current === 0). That's what makes this loop forever
-  // instead of stalling: previously the cleanup only cleared the interval
-  // when leaving the video slide, so every image->image transition left
-  // its old interval running, stacking up multiple leaked intervals that
-  // fought each other and broke the video->images->video cycle.
   useEffect(() => {
-    if (current === 0) {
-      // Video slide: no timer needed, handleVideoEnd() advances us onward
-      clearAuto();
-
-      // Make sure the video actually plays from the start each time we
-      // land back on it (covers the loop-around case, not just manual goTo).
-      if (videoRef.current) {
-        try {
-          videoRef.current.currentTime = 0;
-          videoRef.current.play().catch(() => {});
-        } catch (_) {}
-      }
-    } else {
-      // Image slide: advance automatically every 6s
-      startImageAuto();
-    }
+    startImageAuto();
 
     return () => clearAuto();
   }, [current]);
@@ -128,28 +92,12 @@ export default function HeroSection() {
           style={{ opacity: i === current ? 1 : 0 }}
           aria-hidden="true"
         >
-          {s.type === 'video' ? (
-            <video
-              ref={i === 0 ? videoRef : undefined}
-              src={s.video}
-              className="w-full h-full object-cover"
-              autoPlay
-              muted
-              playsInline
-              loop={false}
-              controls={false}
-              disablePictureInPicture
-              onEnded={handleVideoEnd}
-              preload="auto"
-            />
-          ) : (
-            <img
-              src={s.image}
-              alt=""
-              className="w-full h-full object-cover"
-              loading={i <= 1 ? 'eager' : 'lazy'}
-            />
-          )}
+          <img
+            src={s.image}
+            alt=""
+            className="w-full h-full object-cover"
+            loading={i <= 1 ? 'eager' : 'lazy'}
+          />
         </div>
       ))}
 
