@@ -24,7 +24,7 @@ export default function AboutPreview() {
           >
             <motion.div variants={fadeLeft} className="col-span-2">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjhveqkApQA6HRzGXTJuJp6GbYQEbje4SrjnirKp2hg&s=10"
                 alt="NY Infra Services Engineering Team"
                 className="w-full h-56 object-cover"
                 loading="lazy"
@@ -32,7 +32,7 @@ export default function AboutPreview() {
             </motion.div>
             <motion.div variants={fadeLeft}>
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80"
+                src="https://www.geoengineer.org/storage/education/2317/featured_image/7884/featured_image.jpeg"
                 alt="Geotechnical Investigation"
                 className="w-full h-44 object-cover"
                 loading="lazy"
@@ -40,7 +40,7 @@ export default function AboutPreview() {
             </motion.div>
             <motion.div variants={fadeLeft}>
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7wWOOXPEDCIZrpZ6FoPb13UNA7iIInMN1XoXCCbzqJw&s=10"
                 alt="Interior Design Project"
                 className="w-full h-44 object-cover"
                 loading="lazy"

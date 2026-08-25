@@ -117,7 +117,7 @@ export default function WhyChooseUs() {
               className="relative overflow-hidden rounded-2xl shadow-lg"
             >
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&q=80"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVhzMuY10tjUnZxoa_YjkeUZuex0shYrcKZ-5tFYFdcA&s=10"
                 alt="NY Infra Services Engineering"
                 className="w-full h-64 object-cover"
                 loading="lazy"

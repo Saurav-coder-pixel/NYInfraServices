@@ -29,7 +29,7 @@ export default function Home() {
       <HeroSection />
       <AboutPreview />
       <EngineeringServicesSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <InteriorServicesSection />
       <WhyChooseUs />
       <FeaturedProjects />

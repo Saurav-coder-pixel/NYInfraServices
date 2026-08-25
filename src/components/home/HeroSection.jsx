@@ -45,8 +45,8 @@ const HERO_SLIDES = [
 
 const BADGES = [
   { icon: Shield, label: 'ISO Certified' },
-  { icon: Award, label: '15+ Projects' },
-  { icon: TrendingUp, label: '5+ Years' },
+  { icon: Award, label: '5+ Projects' },
+  { icon: TrendingUp, label: '15+ Years' },
 ];
 
 export default function HeroSection() {
@@ -190,7 +190,6 @@ export default function HeroSection() {
           {[
             { value: '15+', label: 'Projects Completed' },
             { value: '5+',  label: 'Years Experience' },
-            { value: '98%',  label: 'Client Satisfaction' },
           ].map((stat) => (
             <div key={stat.label} className="glass px-7 py-5 text-center min-w-[160px]">
               <div className="font-display font-black text-4xl text-accent">{stat.value}</div>

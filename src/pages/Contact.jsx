@@ -97,7 +97,8 @@ export default function Contact() {
         <meta name="description" content="Get in touch with NY Infra Services for geotechnical engineering, interior design consultations, project enquiries, or career opportunities." />
       </Helmet>
 
-      <PageHero title="Contact Us" subtitle="Reach out to our team for project consultations, enquiries, or partnership opportunities." breadcrumbs={[{ label: 'Contact' }]} image="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=1920&q=80" />
+      <PageHero title="Contact Us" subtitle="Reach out to our team for project consultations, enquiries, or partnership opportunities." breadcrumbs={[{ label: 'Contact' }]} 
+      image=  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtM7chhRcIxJnT_Sn0PNJT4t2cxVgZrH5msMdMyE9z_g&s=10'/>
 
       <section className="section">
         <div className="container-custom">
