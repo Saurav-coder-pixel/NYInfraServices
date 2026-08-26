@@ -52,7 +52,7 @@ export default function AboutPreview() {
               variants={fadeUp}
               className="absolute -bottom-6 -right-6 bg-accent p-6 text-primary text-center shadow-accent"
             >
-              <div className="font-display font-black text-4xl">5+</div>
+              <div className="font-display font-black text-4xl">15+</div>
               <div className="text-xs font-bold uppercase tracking-wider mt-1">Years of Excellence</div>
             </motion.div>
           </motion.div>
