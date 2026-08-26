@@ -12,6 +12,7 @@ export const projects = [
   // ── 1. High-Load Anchoring & Slope Stabilization (Hydro-Power) ─────────────
   {
     id: 'high-load-anchoring-hydro-slope',
+    title: 'High-Load Anchoring & Slope Stabilization',
     category: 'anchoring-stabilization',
     subcategory: 'High-Load Anchoring',
     status: 'Completed',
@@ -46,6 +47,7 @@ export const projects = [
   // ── 2. High-Load Anchoring — Extreme Hydraulic Force Resistance ────────────
   {
     id: 'high-load-anchoring-hydraulic-force',
+    title: 'High-Load Anchoring for Hydraulic Force Resistance',
     category: 'anchoring-stabilization',
     subcategory: 'High-Load Anchoring',
     status: 'Completed',
@@ -79,6 +81,7 @@ export const projects = [
   // ── 3. Heavy Retaining Structures & Landslide Mitigation ──────────────────
   {
     id: 'heavy-retaining-landslide-mitigation',
+    title: 'Heavy Retaining Structures & Landslide Mitigation',
     category: 'retaining-landslide',
     subcategory: 'Retaining & Landslide',
     status: 'Completed',
@@ -113,6 +116,7 @@ export const projects = [
   // ── 4. High-Energy Rockfall Mitigation ────────────────────────────────────
   {
     id: 'high-energy-rockfall-mitigation',
+    title: 'High-Energy Rockfall Mitigation',
     category: 'rockfall-mitigation',
     subcategory: 'Rockfall Mitigation',
     status: 'Completed',
@@ -147,6 +151,7 @@ export const projects = [
   // ── 5. Deep Foundation & Ground Stabilization ─────────────────────────────
   {
     id: 'deep-foundation-tam-grouting',
+    title: 'Deep Foundation & Ground Stabilization',
     category: 'foundation-ground',
     subcategory: 'Deep Foundation',
     status: 'Completed',
@@ -181,6 +186,7 @@ export const projects = [
   // ── 6. Underground Tunneling & Transit Infrastructure ─────────────────────
   {
     id: 'underground-tunneling-transit',
+    title: 'Underground Tunneling & Transit Infrastructure',
     category: 'tunneling-transit',
     subcategory: 'Tunneling & Transit',
     status: 'Completed',

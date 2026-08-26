@@ -57,16 +57,11 @@ export const interiorCategories = [
 ];
 
 export const interiorServices = [
-  { id: 'modular-kitchen',   title: 'Modular Kitchen',        icon: 'UtensilsCrossed',  image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80' },
-  { id: 'wardrobes',         title: 'Wardrobes',              icon: 'DoorOpen',          image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80' },
-  { id: 'living-rooms',      title: 'Living Rooms',           icon: 'Sofa',              image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80' },
-  { id: 'bedrooms',          title: 'Bedrooms',               icon: 'BedDouble',         image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80' },
-  { id: 'false-ceiling',     title: 'False Ceiling',          icon: 'PanelTop',          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80' },
-  { id: 'lighting-design',   title: 'Lighting Design',        icon: 'Lightbulb',         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80' },
-  { id: 'renovation',        title: 'Renovation',             icon: 'Wrench',            image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80' },
-  { id: 'turnkey',           title: 'Turnkey Solutions',      icon: 'Key',               image: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80' },
-  { id: 'furniture-design',  title: 'Furniture Design',       icon: 'Armchair',          image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80' },
-  { id: '3d-visualization',  title: '3D Visualization',       icon: 'Cube',              image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80' },
+  { id: 'bedroom',      title: 'Bedroom',      icon: 'BedDouble',        image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80' },
+  { id: 'drawing-room', title: 'Drawing Room', icon: 'Sofa',             image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80' },
+  { id: 'dining',       title: 'Dining',       icon: 'UtensilsCrossed',  image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80' },
+  { id: 'kitchen',      title: 'Kitchen',      icon: 'CookingPot',       image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80' },
+  { id: 'exterior',     title: 'Exterior',     icon: 'Building2',        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80' },
 ];
 
 export default interiorServices;

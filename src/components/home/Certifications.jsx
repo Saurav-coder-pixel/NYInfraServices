@@ -49,6 +49,15 @@ export default function Certifications() {
               Our operations adhere to the highest international standards across quality management,
               environmental responsibility, and occupational health & safety.
             </motion.p>
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              className="text-primary text-sm font-semibold mt-4"
+            >
+              CIN: U41000DC2026PTC474224
+            </motion.p>
           </div>
 
           {/* Right: Cert cards */}

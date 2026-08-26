@@ -119,7 +119,7 @@ export default function WhyChooseUs() {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVhzMuY10tjUnZxoa_YjkeUZuex0shYrcKZ-5tFYFdcA&s=10"
                 alt="NY Infra Services Engineering"
-                className="w-full h-64 object-cover"
+                className="w-full h-96 object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/60 to-slate-900/30" />
@@ -135,6 +135,9 @@ export default function WhyChooseUs() {
                 <h4 className="text-white font-display font-bold text-lg mb-1">
                   ISO 9001 : 14001 : 45001 Certified
                 </h4>
+                <p className="text-accent text-xs font-semibold tracking-wider mb-2">
+                  CIN: U41000DC2026PTC474224
+                </p>
                 <p className="text-white/60 text-xs leading-relaxed mb-5">
                   Internationally recognized for environmental responsibility and
                   safety compliance across every project.

@@ -32,7 +32,7 @@ export default function About() {
       </Helmet>
 
       <PageHero
-        title="About NY Infra Services"
+        title="About NY Infra Services Pvt Limited"
         subtitle="Pioneering geotechnical engineering and premium interior design across India."
         breadcrumbs={[{ label: 'About Us' }]}
         image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
@@ -49,7 +49,7 @@ export default function About() {
               </motion.h2>
               <motion.div variants={fadeUp} className="line-accent" />
               <motion.p variants={fadeUp} className="text-secondary leading-relaxed mb-4">
-                <strong className="text-primary">NY INFRA SERVICES</strong> is a premier, technically-driven geotechnical and infrastructure engineering firm. Built on a solid foundation of over 15 years of rigorous industry expertise, we specialize in delivering high-end, sustainable engineering solutions for the most complex terrains and structural challenges.
+                <strong className="text-primary">NY INFRA SERVICES PVT LTD</strong> is a premier, technically-driven geotechnical and infrastructure engineering firm. Built on a solid foundation of over 15 years of rigorous industry expertise, we specialize in delivering high-end, sustainable engineering solutions for the most complex terrains and structural challenges.
               </motion.p>
               <motion.p variants={fadeUp} className="text-secondary leading-relaxed mb-6">
                 Our core leadership carries a distinguished track record of executing critically important infrastructure projects in some of the world's most hostile and glaciated terrains (including prestigious border infrastructure in Ladakh). We bring this same level of military-grade precision, zero-tolerance safety, and engineering excellence to every project we undertake.
@@ -63,7 +63,7 @@ export default function About() {
                 <blockquote className="text-primary font-medium italic border-l-2 border-accent pl-4">
                   “Great infrastructure is not built by machines alone; it is built by vision, dedication, and the people behind it.”
                 </blockquote>
-                <p className="text-sm font-bold text-neutral-900 mt-2 ml-4">Neeraj, Founder – NY Infra</p>
+                <p className="text-sm font-bold text-neutral-900 mt-2 ml-4">Neeraj, Founder – NY Infra Services PVT LTD</p>
               </motion.div>
               
             </motion.div>

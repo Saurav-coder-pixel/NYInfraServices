@@ -85,7 +85,7 @@ function ProjectDetailPage({ project }) {
   return (
     <>
       <Helmet>
-        <title>{project.title} – {SITE.name}</title>
+        <title>{`${project.title} - ${SITE.name}`}</title>
         <meta name="description" content={project.scope} />
       </Helmet>
       <PageHero title={project.title} subtitle={project.scope} breadcrumbs={[{ label: 'Projects', path: '/projects' }, { label: project.subcategory }]} image={project.image} />
