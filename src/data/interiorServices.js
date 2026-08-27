@@ -60,8 +60,8 @@ export const interiorServices = [
   { id: 'bedroom',      title: 'Bedroom',      icon: 'BedDouble',        image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80' },
   { id: 'drawing-room', title: 'Drawing Room', icon: 'Sofa',             image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80' },
   { id: 'dining',       title: 'Dining',       icon: 'UtensilsCrossed',  image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80' },
-  { id: 'kitchen',      title: 'Kitchen',      icon: 'CookingPot',       image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80' },
-  { id: 'exterior',     title: 'Exterior',     icon: 'Building2',        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80' },
+  { id: 'kitchen',      title: 'Kitchen',      icon: 'CookingPot',       image: 'https://plus.unsplash.com/premium_photo-1680382578857-c331ead9ed51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2l0Y2hlbiUyMGludGVyaW9yfGVufDB8fDB8fHww' },
+  { id: 'exterior',     title: 'Exterior',     icon: 'Building2',        image: 'https://images.unsplash.com/photo-1722421492323-eaf9c401befe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXh0ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D' },
 ];
 
 export default interiorServices;

@@ -75,6 +75,15 @@ export default function EngineeringServicesSection() {
               variants={fadeUp}
               className="card card-hover p-8 cursor-pointer border-b-4 border-transparent hover:border-accent group"
             >
+              <div className="-mx-8 -mt-8 mb-6 overflow-hidden" style={{ aspectRatio: '16 / 9' }}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+
               <div className="flex items-center justify-center w-14 h-14 bg-primary/10 text-primary rounded-sm transition-all duration-300 group-hover:bg-primary group-hover:text-white mb-5">
                 <ServiceIcon name={service.icon} size={24} />
               </div>
