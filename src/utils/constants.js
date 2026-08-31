@@ -5,7 +5,6 @@ export const SITE = {
   description:
     'NY Infra Services is a premier geotechnical engineering and interior design company delivering world-class infrastructure solutions and transformative interior spaces across India.',
   phone: '+91-9899876659',
-  phone2: '+91-9818521797',
   email: 'nyinfraservices@gmail.com',
   email2: 'nyinfraservices@gmail.com',
   whatsapp: '+91-9899876659',

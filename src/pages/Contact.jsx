@@ -112,7 +112,7 @@ export default function Contact() {
               </motion.p>
 
               {[
-                { icon: Phone, label: 'Phone', values: [SITE.phone, SITE.phone2], href: `tel:${SITE.phone.replace(/[^+0-9]/g, '')}` },
+                { icon: Phone, label: 'Phone', values: [SITE.phone], href: `tel:${SITE.phone.replace(/[^+0-9]/g, '')}` },
                 { icon: Mail,  label: 'Email', values: [SITE.email], href: `mailto:${SITE.email}` },
                 { icon: MapPin, label: 'Address', values: [SITE.address] },
               ].map(({ icon: Icon, label, values, href }) => (
