@@ -27,7 +27,7 @@ export const engineeringServices = [
     description:
       'Advanced rockfall protection systems including high-energy absorption barriers, drapery nets, and hybrid systems designed to stop high-velocity rockfalls and debris flows.',
     icon: 'Shield',
-    image: 'https://plus.unsplash.com/premium_photo-1663045584825-90a22961a4de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fFJvY2tmYWxsJTIwTWl0aWdhdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwvkCMFP06PFSkPPKe66EQ13IJGDSTzJ2OxT_0BE7Ojg&s=10',
     features: [
       'High-energy barrier systems',
       'Drapery netting solutions',
@@ -46,7 +46,7 @@ export const engineeringServices = [
     description:
       'Custom-engineered shoring solutions for deep excavations, underground structures, and basement constructions ensuring structural integrity and worker safety.',
     icon: 'Columns',
-    image: 'https://image.made-in-china.com/202f0j00oNDcdnaMpFpy/Trench-Box-Trench-Shoring-Steel-Formwork-Safety-System-for-Excavation-Construction.webp',
+    image: '/hero-shoring.jpg',
     features: [
       'Sheet pile walls',
       'Soldier pile & lagging',
