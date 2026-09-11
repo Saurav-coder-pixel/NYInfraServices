@@ -67,7 +67,7 @@ export const testimonials = [
     company: 'NHAI',
     rating: 5,
     content:
-      'NY Infra Services delivered our NH-48 MSE wall project with exceptional quality and precision. Their technical expertise and site management capabilities are truly world-class. We look forward to engaging them on future highway projects.',
+      'NY Infra Services Pvt Ltd delivered our NH-48 MSE wall project with exceptional quality and precision. Their technical expertise and site management capabilities are truly world-class. We look forward to engaging them on future highway projects.',
     avatar: 'https://i.pravatar.cc/80?img=11',
     project: 'NH-48 Highway Expansion',
   },
@@ -78,7 +78,7 @@ export const testimonials = [
     company: 'Border Roads Organisation',
     rating: 5,
     content:
-      'Executing geo-engineering works in Ladakh at 14,000 ft requires extraordinary commitment and capability. NY Infra Services exceeded every expectation. Their team worked tirelessly in -20°C conditions to secure our strategic road.',
+      'Executing geo-engineering works in Ladakh at 14,000 ft requires extraordinary commitment and capability. NY Infra Services Pvt Ltd exceeded every expectation. Their team worked tirelessly in -20°C conditions to secure our strategic road.',
     avatar: 'https://i.pravatar.cc/80?img=12',
     project: 'Border Road Geo-Engineering',
   },
@@ -89,7 +89,7 @@ export const testimonials = [
     company: 'DMRC (Delhi Metro)',
     rating: 5,
     content:
-      'The micro piling and deep foundation work for our Phase III metro stations was executed flawlessly in an incredibly constrained urban environment. NY Infra Services is our preferred geotechnical partner.',
+      'The micro piling and deep foundation work for our Phase III metro stations was executed flawlessly in an incredibly constrained urban environment. NY Infra Services Pvt Ltd is our preferred geotechnical partner.',
     avatar: 'https://i.pravatar.cc/80?img=13',
     project: 'Metro Phase III Piling',
   },
@@ -100,7 +100,7 @@ export const testimonials = [
     company: 'Private Residence, Gurugram',
     rating: 5,
     content:
-      'I could not believe the transformation NY Infra Services achieved for our villa interior. They listened to every detail of our vision and brought it to life beyond what I had imagined. The quality is simply outstanding.',
+      'I could not believe the transformation NY Infra Services Pvt Ltd achieved for our villa interior. They listened to every detail of our vision and brought it to life beyond what I had imagined. The quality is simply outstanding.',
     avatar: 'https://i.pravatar.cc/80?img=14',
     project: 'Luxury Villa Interior',
   },
@@ -111,7 +111,7 @@ export const testimonials = [
     company: 'Heritage Stays Group',
     rating: 5,
     content:
-      'Our boutique hotel in Jaipur has become a landmark property. NY Infra Services blended Rajasthani heritage with modern luxury in a way that has earned us multiple hospitality awards. Exceptional design team.',
+      'Our boutique hotel in Jaipur has become a landmark property. NY Infra Services Pvt Ltd blended Rajasthani heritage with modern luxury in a way that has earned us multiple hospitality awards. Exceptional design team.',
     avatar: 'https://i.pravatar.cc/80?img=15',
     project: 'Boutique Hotel Interior',
   },
@@ -122,7 +122,7 @@ export const testimonials = [
     company: 'Fortune 500 Tech Company',
     rating: 5,
     content:
-      'Our Noida HQ transformation by NY Infra Services has significantly improved employee satisfaction and collaboration. The design perfectly captures our brand identity. LEED certification was a welcome bonus.',
+      'Our Noida HQ transformation by NY Infra Services Pvt Ltd has significantly improved employee satisfaction and collaboration. The design perfectly captures our brand identity. LEED certification was a welcome bonus.',
     avatar: 'https://i.pravatar.cc/80?img=16',
     project: 'Corporate HQ Interior',
   },

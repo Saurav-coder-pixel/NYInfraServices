@@ -25,7 +25,7 @@ export default function AboutPreview() {
             <motion.div variants={fadeLeft} className="col-span-2">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjhveqkApQA6HRzGXTJuJp6GbYQEbje4SrjnirKp2hg&s=10"
-                alt="NY Infra Services Engineering Team"
+                alt="NY Infra Services Pvt Ltd Engineering Team"
                 className="w-full h-56 object-cover"
                 loading="lazy"
               />
@@ -64,7 +64,7 @@ export default function AboutPreview() {
             whileInView="visible"
             viewport={viewportOnce}
           >
-            <motion.span variants={fadeUp} className="section-badge">About NY Infra Services</motion.span>
+            <motion.span variants={fadeUp} className="section-badge">About NY Infra Services Pvt Ltd</motion.span>
 
             <motion.h2 variants={fadeUp} className="font-display font-extrabold text-3xl lg:text-4xl text-neutral-900 leading-tight mb-4">
               Two Pillars of Excellence:<br />
@@ -75,7 +75,7 @@ export default function AboutPreview() {
             <motion.div variants={fadeUp} className="line-accent" />
 
             <motion.p variants={fadeUp} className="text-secondary text-base leading-relaxed mb-4">
-              NY Infra Services is a premier engineering and design firm headquartered in Delhi,
+              NY Infra Services Pvt Ltd is a premier engineering and design firm headquartered in Delhi,
               India. We specialize in geotechnical engineering solutions for India's most critical
               infrastructure — railways, highways, airports, metro, and hydropower — while also
               delivering interior design for residential, commercial, and hospitality clients.

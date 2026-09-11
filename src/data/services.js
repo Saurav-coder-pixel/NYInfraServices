@@ -46,7 +46,7 @@ export const engineeringServices = [
     description:
       'Custom-engineered shoring solutions for deep excavations, underground structures, and basement constructions ensuring structural integrity and worker safety.',
     icon: 'Columns',
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80',
+    image: 'https://image.made-in-china.com/202f0j00oNDcdnaMpFpy/Trench-Box-Trench-Shoring-Steel-Formwork-Safety-System-for-Excavation-Construction.webp',
     features: [
       'Sheet pile walls',
       'Soldier pile & lagging',
@@ -65,7 +65,7 @@ export const engineeringServices = [
     description:
       'Design and construction of Mechanically Stabilized Earth (MSE) walls and reinforced soil structures for highway embankments, bridge abutments, and retaining walls.',
     icon: 'Building2',
-    image: 'https://plus.unsplash.com/premium_photo-1742461205048-5ed88d1eb4b7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UmVpbmZvcmNlZCUyMEVhcnRoJTIwV2FsbHN8ZW58MHx8MHx8fDA%3D',
+    image: "/rs-wall.jpeg",
     features: [
       'MSE wall design & construction',
       'Precast concrete face panels',

@@ -102,7 +102,7 @@ export default function WhyChooseUs() {
               viewport={viewportOnce}
               className="text-secondary text-base leading-relaxed mb-10"
             >
-              NY Infra Services combines technical depth, refined execution, and
+              NY Infra Services Pvt Ltd combines technical depth, refined execution, and
               client-first service to deliver reliable, elegant infrastructure and interiors.
               Our clients rely on us for projects that demand precision, accountability,
               and premium delivery.
@@ -118,7 +118,7 @@ export default function WhyChooseUs() {
             >
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVhzMuY10tjUnZxoa_YjkeUZuex0shYrcKZ-5tFYFdcA&s=10"
-                alt="NY Infra Services Engineering"
+                alt="NY Infra Services Pvt Ltd Engineering"
                 className="w-full h-96 object-cover"
                 loading="lazy"
               />

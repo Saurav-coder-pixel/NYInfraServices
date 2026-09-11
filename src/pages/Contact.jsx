@@ -94,7 +94,7 @@ export default function Contact() {
     <motion.div {...pageTransition}>
       <Helmet>
         <title>Contact Us – {SITE.name}</title>
-        <meta name="description" content="Get in touch with NY Infra Services for geotechnical engineering, interior design consultations, project enquiries, or career opportunities." />
+        <meta name="description" content="Get in touch with NY Infra Services Pvt Ltd for geotechnical engineering, interior design consultations, project enquiries, or career opportunities." />
       </Helmet>
 
       <PageHero title="Contact Us" subtitle="Reach out to our team for project consultations, enquiries, or partnership opportunities." breadcrumbs={[{ label: 'Contact' }]} 
@@ -143,7 +143,7 @@ export default function Contact() {
               {/* WhatsApp */}
               <motion.a
                 variants={fadeUp}
-                href={`https://wa.me/${SITE.whatsapp.replace(/[^0-9]/g, '')}?text=Hello, I would like to enquire about NY Infra Services.`}
+                href={`https://wa.me/${SITE.whatsapp.replace(/[^0-9]/g, '')}?text=Hello, I would like to enquire about NY Infra Services Pvt Ltd.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 mt-6 p-4 bg-green-600 text-white hover:bg-green-700 transition-colors"
@@ -241,7 +241,7 @@ export default function Contact() {
                     </button>
 
                     <p className="text-secondary text-xs mt-4 text-center">
-                      By submitting this form, you agree to be contacted by NY Infra Services regarding your enquiry.
+                      By submitting this form, you agree to be contacted by NY Infra Services Pvt Ltd regarding your enquiry.
                     </p>
                   </form>
                 )}
@@ -257,7 +257,7 @@ export default function Contact() {
           <h2 className="font-display font-bold text-xl text-neutral-900 mb-6">Our Location</h2>
           <div className="w-full h-80 bg-neutral-100 overflow-hidden">
             <iframe
-              title="NY Infra Services Office Location"
+              title="NY Infra Services Pvt Ltd Office Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.5!2d77.0266!3d28.4595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDEnMzUuOCJF!5e0!3m2!1sen!2sin!4v1620000000000"
               width="100%"
               height="100%"

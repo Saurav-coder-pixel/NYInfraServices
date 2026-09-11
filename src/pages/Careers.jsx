@@ -160,8 +160,8 @@ export default function Careers() {
   return (
     <motion.div {...pageTransition}>
       <Helmet>
-        <title>Careers at NY Infra Services</title>
-        <meta name="description" content="Join the NY Infra Services team. Exciting career opportunities in geotechnical engineering, interior design, project management, and business development." />
+        <title>Careers at NY Infra Services Pvt Ltd</title>
+        <meta name="description" content="Join the NY Infra Services Pvt Ltd team. Exciting career opportunities in geotechnical engineering, interior design, project management, and business development." />
       </Helmet>
 
       <PageHero
@@ -181,7 +181,7 @@ export default function Careers() {
               </motion.h2>
               <motion.div variants={fadeUp} className="line-accent" />
               <motion.p variants={fadeUp} className="text-secondary leading-relaxed mb-4">
-                At NY Infra Services, we believe that great work comes from great people. We invest
+                At NY Infra Services Pvt Ltd, we believe that great work comes from great people. We invest
                 in our team's growth, create challenging opportunities, and build a culture of
                 excellence, collaboration, and innovation.
               </motion.p>
@@ -207,7 +207,7 @@ export default function Careers() {
               whileInView="visible"
               viewport={viewportOnce}
               src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800&q=80"
-              alt="Team collaboration at NY Infra Services"
+              alt="Team collaboration at NY Infra Services Pvt Ltd"
               className="w-full h-96 object-cover"
               loading="lazy"
             />

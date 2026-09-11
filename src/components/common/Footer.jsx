@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-accent text-xs font-bold uppercase tracking-widest mb-1">Ready to Build?</p>
-            <h2 className="font-display font-extrabold text-3xl text-white">Start Your Project with NY Infra Services</h2>
+            <h2 className="font-display font-extrabold text-3xl text-white">Start Your Project with NY Infra Services Pvt Ltd</h2>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link to="/contact" className="btn-accent">

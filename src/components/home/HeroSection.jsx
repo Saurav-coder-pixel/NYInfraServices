@@ -26,10 +26,18 @@ const HERO_SLIDES = [
   },
   {
     headline: 'Securing Every\nSlope & Ground',
-    sub: `From Himalayan highways to metro foundations — NY Infra Services protects India's most critical infrastructure with precision geo-engineering.`,
+    sub: `From Himalayan highways to metro foundations — NY Infra Services Pvt Ltd protects India's most critical infrastructure with precision geo-engineering.`,
     tag: 'Infrastructure Excellence',
     cta: { label: 'View Projects', path: '/projects' },
     image: heroImage2,
+    type: 'image',
+  },
+  {
+    headline: 'Advanced\nShoring Systems',
+    sub: 'Custom-engineered shoring solutions for deep excavations and underground structures, ensuring absolute structural integrity and worker safety.',
+    tag: 'Deep Excavations',
+    cta: { label: 'View Shoring Systems', path: '/services/shoring-systems' },
+    image: '/hero-shoring.jpg',
     type: 'image',
   },
   {

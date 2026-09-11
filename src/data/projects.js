@@ -44,12 +44,12 @@ export const projects = [
     tags: ['Cable Anchors', 'Slope Stabilization', 'Post-Tensioning'],
   },
 
-  // ── 2. High-Load Anchoring — Extreme Hydraulic Force Resistance ────────────
+  // ── 2. Self Drill Anchor & Soil Nailing in Slope Protection ────────────
   {
-    id: 'high-load-anchoring-hydraulic-force',
-    title: 'High-Load Anchoring for Hydraulic Force Resistance',
+    id: 'self-drill-anchor-soil-nailing',
+    title: 'Self Drill Anchor & Soil Nailing in Slope Protection',
     category: 'anchoring-stabilization',
-    subcategory: 'High-Load Anchoring',
+    subcategory: 'Soil Nailing & Anchoring',
     status: 'Completed',
     image: '/site-photo-2.jpeg',
     gallery: [
@@ -57,25 +57,25 @@ export const projects = [
       '/cable-anchor-1.jpeg',
     ],
     description:
-      'Specialized high-capacity anchoring to stabilize rock mass against extreme hydraulic forces, protecting critical energy-generation infrastructure from high-velocity water impact.',
+      'Comprehensive slope protection using Self Drill Anchors (SDA) and soil nailing techniques to stabilize vulnerable terrain.',
     technicalScope:
-      'Stabilization using 100-Ton cable anchors, targeted grouting, and surface protection to secure geological formations operating under extreme hydraulic loading conditions.',
+      'Installation of Self Drill Anchors and soil nails to reinforce soil mass and provide long-term stability for slope protection.',
     scope:
-      'Rock mass strengthening to resist high-impact hydraulic forces and preserve critical energy infrastructure.',
+      'Slope protection utilizing advanced drilling and anchoring methodologies.',
     challenge:
-      'Extreme water velocities and unstable geology required a solution combining high structural strength with long-term corrosion-resistant design.',
+      'Unstable soil conditions and steep slopes required an efficient, combined drilling and grouting solution for immediate stabilization.',
     solution:
-      'Deployed 100-Ton cable anchors with corrosion-protected anchor heads, reinforced drainage, and targeted grouting for a durable stabilization system.',
+      'Executed Self Drill Anchor (SDA) installation paired with soil nailing to effectively secure the slope face.',
     outcome:
-      'Achieved a robust protection system capable of sustaining extreme hydraulic load cycles with minimal maintenance.',
-    technology: ['100-Ton Cable Anchors', 'Targeted Grouting', 'Hydraulic Force Mitigation', 'Rock Mass Protection'],
+      'Achieved robust slope stability, preventing soil erosion and structural failure.',
+    technology: ['Self Drill Anchors (SDA)', 'Soil Nailing', 'Slope Stabilization', 'Grouting'],
     features: [
-      'High-capacity anchoring against hydraulic forces',
-      'Corrosion-protected anchor design',
-      'Resilient rock face anchoring',
-      'Engineered for extreme force resistance',
+      'Self Drill Anchor (SDA) system installation',
+      'High-efficiency soil nailing',
+      'Immediate slope stabilization',
+      'Effective in challenging soil conditions',
     ],
-    tags: ['Cable Anchors', 'Hydraulic Force', 'Rock Anchoring'],
+    tags: ['Self Drill Anchors', 'Soil Nailing', 'Slope Protection'],
   },
 
   // ── 3. Heavy Retaining Structures & Landslide Mitigation ──────────────────
@@ -120,9 +120,9 @@ export const projects = [
     category: 'rockfall-mitigation',
     subcategory: 'Rockfall Mitigation',
     status: 'Completed',
-    image: '/rs-wall.jpeg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwvkCMFP06PFSkPPKe66EQ13IJGDSTzJ2OxT_0BE7Ojg&s=10',
     gallery: [
-      '/rs-wall.jpeg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwvkCMFP06PFSkPPKe66EQ13IJGDSTzJ2OxT_0BE7Ojg&s=10',
       '/site-photo-3.jpeg',
       '/slope-sdra-installation.jpeg',
     ],
@@ -190,9 +190,9 @@ export const projects = [
     category: 'tunneling-transit',
     subcategory: 'Tunneling & Transit',
     status: 'Completed',
-    image: '/structure-work.jpeg',
+    image: 'https://constructiontimes.co.in/uploads/images/202503/image_870x_67d9164201127.jpg',
     gallery: [
-      '/structure-work.jpeg',
+      'https://constructiontimes.co.in/uploads/images/202503/image_870x_67d9164201127.jpg',
       '/site-photo-1.jpeg',
     ],
     description:

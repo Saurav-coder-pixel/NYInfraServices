@@ -35,7 +35,7 @@ export default function CTASection() {
             </motion.h2>
             <motion.p variants={fadeUp} className="text-white/70 text-lg leading-relaxed">
               Whether you need geotechnical expertise for a critical infrastructure project or a
-              premium interior transformation — NY Infra Services is your trusted partner.
+              premium interior transformation — NY Infra Services Pvt Ltd is your trusted partner.
             </motion.p>
           </div>
 

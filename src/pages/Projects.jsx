@@ -58,7 +58,7 @@ function ProjectsList() {
     <>
       <Helmet>
         <title>Projects – {SITE.name}</title>
-        <meta name="description" content="Explore NY Infra Services' portfolio of infrastructure and interior design projects — railways, highways, airports, metro, luxury residences, and commercial spaces." />
+        <meta name="description" content="Explore NY Infra Services Pvt Ltd' portfolio of infrastructure and interior design projects — railways, highways, airports, metro, luxury residences, and commercial spaces." />
       </Helmet>
       <PageHero title="Our Projects" subtitle="A portfolio of engineering excellence and design mastery across India." breadcrumbs={[{ label: 'Projects' }]} image="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80" />
       <section className="section">

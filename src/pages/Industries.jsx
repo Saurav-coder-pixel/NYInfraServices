@@ -15,7 +15,7 @@ export default function Industries() {
     <motion.div {...pageTransition}>
       <Helmet>
         <title>Industries Served – {SITE.name}</title>
-        <meta name="description" content="NY Infra Services delivers geotechnical engineering solutions for railways, highways, airports, metro, hydropower, and border infrastructure projects across India." />
+        <meta name="description" content="NY Infra Services Pvt Ltd delivers geotechnical engineering solutions for railways, highways, airports, metro, hydropower, and border infrastructure projects across India." />
       </Helmet>
 
       <PageHero

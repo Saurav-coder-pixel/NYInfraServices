@@ -32,7 +32,7 @@ export default function Gallery() {
     <motion.div {...pageTransition}>
       <Helmet>
         <title>Gallery – {SITE.name}</title>
-        <meta name="description" content="Explore the NY Infra Services project gallery — infrastructure engineering and premium interior design projects across India." />
+        <meta name="description" content="Explore the NY Infra Services Pvt Ltd project gallery — infrastructure engineering and premium interior design projects across India." />
       </Helmet>
 
       <PageHero title="Project Gallery" subtitle="A visual showcase of our engineering and design excellence." breadcrumbs={[{ label: 'Gallery' }]} image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" />
@@ -49,25 +49,24 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Masonry-like grid */}
+          {/* Masonry / Collage grid */}
           <motion.div key={activecat} variants={stagger} initial="hidden" animate="visible"
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
+            className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4"
           >
             {filtered.map((img) => (
               <motion.div
                 key={img.id}
                 variants={fadeUp}
                 onClick={() => setLightbox(img)}
-                className="relative group overflow-hidden cursor-pointer"
-                style={{ aspectRatio: img.id % 5 === 0 ? '1/1.2' : img.id % 3 === 0 ? '1/1' : '4/3' }}
+                className="relative group overflow-hidden cursor-pointer rounded-xl break-inside-avoid"
               >
-                <img src={img.src} alt={img.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/50 transition-all duration-300 flex items-center justify-center">
-                  <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <img src={img.src} alt={img.title} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-300 flex items-center justify-center">
+                  <ZoomIn size={32} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-75 group-hover:scale-100" />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white text-xs font-semibold">{img.title}</p>
-                  <p className="text-white/60 text-xs">{img.cat}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white text-sm font-bold tracking-wide">{img.title}</p>
+                  <p className="text-accent text-xs font-semibold mt-1 uppercase tracking-wider">{img.cat}</p>
                 </div>
               </motion.div>
             ))}

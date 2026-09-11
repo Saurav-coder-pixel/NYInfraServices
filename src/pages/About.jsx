@@ -28,11 +28,11 @@ export default function About() {
     <motion.div {...pageTransition}>
       <Helmet>
         <title>About Us – {SITE.name}</title>
-        <meta name="description" content="Learn about NY Infra Services — our history, leadership team, values, and commitment to engineering excellence and design innovation." />
+        <meta name="description" content="Learn about NY Infra Services Pvt Ltd — our history, leadership team, values, and commitment to engineering excellence and design innovation." />
       </Helmet>
 
       <PageHero
-        title="About NY Infra Services Pvt Limited"
+        title="About NY Infra Services Pvt Ltd Pvt Limited"
         subtitle="Pioneering geotechnical engineering and premium interior design across India."
         breadcrumbs={[{ label: 'About Us' }]}
         image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
@@ -72,7 +72,7 @@ export default function About() {
               <motion.img variants={fadeLeft} src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Engineering Excellence" className="w-full h-64 object-cover" loading="lazy" />
               <div className="grid grid-cols-2 gap-4">
                 <motion.img variants={fadeLeft} src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Interior Design" className="w-full h-40 object-cover" loading="lazy" />
-                <motion.img variants={fadeLeft} src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=600&q=80" alt="Infrastructure" className="w-full h-40 object-cover" loading="lazy" />
+                <motion.img variants={fadeLeft} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwvkCMFP06PFSkPPKe66EQ13IJGDSTzJ2OxT_0BE7Ojg&s=10" alt="Infrastructure" className="w-full h-40 object-cover" loading="lazy" />
               </div>
             </motion.div>
           </div>

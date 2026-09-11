@@ -1,9 +1,9 @@
 // ─── Site Constants ──────────────────────────────────────────────────────────
 export const SITE = {
-  name: 'NY Infra Services',
+  name: 'NY Infra Services Pvt Ltd',
   tagline: 'Engineering Excellence. Aesthetic Perfection.',
   description:
-    'NY Infra Services is a premier geotechnical engineering and interior design company delivering world-class infrastructure solutions and transformative interior spaces across India.',
+    'NY Infra Services Pvt Ltd is a premier geotechnical engineering and interior design company delivering world-class infrastructure solutions and transformative interior spaces across India.',
   phone: '+91-9899876659',
   email: 'nyinfraservices@gmail.com',
   email2: 'nyinfraservices@gmail.com',
