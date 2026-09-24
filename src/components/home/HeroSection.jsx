@@ -150,7 +150,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="text-white/75 text-lg leading-relaxed max-w-lg mb-8"
+            className="text-white text-lg leading-relaxed max-w-lg mb-8 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
           >
             {slide.sub}
           </motion.p>
@@ -179,7 +179,7 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4 mt-10"
           >
             {BADGES.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-white/60 text-xs font-medium">
+              <div key={label} className="flex items-center gap-2 text-white text-xs font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                 <Icon size={14} className="text-accent" />
                 {label}
               </div>
@@ -199,7 +199,7 @@ export default function HeroSection() {
           ].map((stat) => (
             <div key={stat.label} className="glass px-7 py-5 text-center min-w-[160px]">
               <div className="font-display font-black text-4xl text-accent">{stat.value}</div>
-              <div className="text-white/60 text-xs mt-1 uppercase tracking-wider">{stat.label}</div>
+              <div className="text-white text-xs mt-1 uppercase tracking-wider font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -219,13 +219,13 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 right-8 flex flex-col items-center gap-2 text-white/40 text-xs hidden lg:flex">
-        <span className="tracking-widest uppercase" style={{writingMode:'vertical-rl'}}>Scroll</span>
+      <div className="absolute bottom-10 right-8 flex flex-col items-center gap-2 text-white text-xs hidden lg:flex drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+        <span className="tracking-widest uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
         <ChevronDown size={14} className="animate-bounce" />
       </div>
 
       {/* Diagonal bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-white" style={{clipPath:'polygon(0 100%,100% 0,100% 100%)'}} />
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-white" style={{ clipPath: 'polygon(0 100%,100% 0,100% 100%)' }} />
     </section>
   );
 }
